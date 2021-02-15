@@ -1,0 +1,6 @@
+purge to uninstall
+
+to restart
+
+systemctl reboot
+(in Ubuntu it was just 'restart')
