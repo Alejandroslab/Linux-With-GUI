@@ -1,0 +1,9 @@
+sudo apt install task-xfce-desktop
+
+wait a bit...till end of installation.
+
+Then
+ sudo systemctl set-default graphical.target
+ 
+ 
+ sudo reboot
