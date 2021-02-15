@@ -1,0 +1,31 @@
+Update things first...
+
+sudo apt-get update
+
+Now install xrdp:
+
+sudo apt install xrdp 
+
+Check status
+
+sudo systemctl status xrdp
+
+Add user xrdp to ssl-cert
+
+sudo adduser xrdp ssl-cert  
+
+(evenutally configure your firewall (ufw or whatever))
+To check hostname and/or ip:
+
+hostname
+
+hostname -I
+
+
+Now remote desktop on Windows. Type the hostname or IP 
+
+Access with credetianls. But remember:
+
+ONLY SUDO USER OR ROOT CAN CONNECT WITH RDP (REMOTE DESKOTP FOR WINDOWS)
+
+if you try to connect with credentials of a normal user it will not work. The connection will abort.
