@@ -12,3 +12,28 @@ Open this config file
 
 Uncomment the WaylandEnable line.
 Save and close.
+__________________-
+
+Removing 'xserver-xorg-video-intel' and installing 'firmware-misc-nonfree':
+
+login as root user
+Add non-free repository entry to /etc/apt/sources.list:
+
+# Non-Free
+deb http://http.us.debian.org/debian stable main contrib non-free
+EOT
+
+Update or Download packages information for all sources:
+
+apt update
+
+install now firmware-misc-nonfree:
+
+apt install firmware-misc-nonfree
+
+Uninstall xserver-xorg-video-intel
+
+apt purge xserver-xorg-video-intel
+
+NOW REBOOT!
+systemctl reboot
