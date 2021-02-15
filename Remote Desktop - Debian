@@ -29,3 +29,7 @@ Access with credetianls. But remember:
 ONLY SUDO USER OR ROOT CAN CONNECT WITH RDP (REMOTE DESKOTP FOR WINDOWS)
 
 if you try to connect with credentials of a normal user it will not work. The connection will abort.
+
+It will also be not possible to use RDP while the same user is already logged. (you have to logout)
+
+Debian seem to be more strict on authorisations.
