@@ -1,0 +1,7 @@
+Add to the group of sudoers an user called 'utente1'
+
+first log as root
+then type
+
+sudo adduser utente1 sudo
+
