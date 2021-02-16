@@ -7,3 +7,7 @@ Then
  
  
  sudo reboot
+ 
+ 
+ For XRDP
+ if you log in XRDP in Gnome it will not allow you to sign in also with XFCE
