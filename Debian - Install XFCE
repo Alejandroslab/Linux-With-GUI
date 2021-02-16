@@ -5,7 +5,7 @@ wait a bit...till end of installation.
 Then
  sudo systemctl set-default graphical.target
  
- 
+ finally:
  sudo reboot
  
  
