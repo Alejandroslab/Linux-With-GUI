@@ -33,3 +33,8 @@ if you try to connect with credentials of a normal user it will not work. The co
 It will also be not possible to use RDP while the same user is already logged. (you have to logout)
 
 Debian seem to be more strict on authorisations.
+
+
+REMEMBER TO LOGOUT BEFORE ACCESS REMOTELY!!
+
+The same process can be done for Linux Mint (XFCE)
