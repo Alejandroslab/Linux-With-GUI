@@ -3,3 +3,15 @@ Wi-Fi coverage should also be the best possible as it will not work properly if 
 
 
 When you finish using it remember also to logout.
+-----
+install
+
+sudo apt update
+sudo apt-get install raspberrypi-ui-mods xinit xserver-xorg
+
+sudo reboot
+
+sudo apt install xrdp 
+
+systemctl show -p SubState --value xrdp
+sudo adduser xrdp ssl-cert  
