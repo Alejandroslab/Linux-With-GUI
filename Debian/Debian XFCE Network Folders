@@ -1,0 +1,7 @@
+You will need gvfs-backends ptherwise the Network folder in Debian XFCE will not
+work. Therefore:
+
+sudo apt-get update -y
+
+
+sudo apt-get install -y gvfs-backends

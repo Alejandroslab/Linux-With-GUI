@@ -4,10 +4,13 @@ wait a bit...till end of installation.
 
 Then
  sudo systemctl set-default graphical.target
- 
+
  finally:
  sudo reboot
- 
- 
- For XRDP
+
+
+ For XRDP:
  if you log in XRDP in Gnome it will not allow you to sign in also with XFCE
+
+
+ It is easier therefore to install directly Debian XFC
