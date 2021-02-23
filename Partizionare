@@ -1,0 +1,22 @@
+ubuntu è composto da:
+il file system (cartella root) caratterizzato da il simbolo /
+la cartella home (dove salveremo i nostri documenti)
+e l'area di swap(che insieme alla ram vanno a formare la memoria virtuale del computer: lo swap è una sorta di estensione della ram che però è situata sul disco rigido)
+
+per installare al posto di windows e se si ha piu di una partizione occorre selezionare, al momento dell'installazione il metodo partizionamento avanzato
+qua bisognerà eliminare la partizione C: (individuandola tramite la sua dimensione; perchè non comparira C)
+
+dopodichè fare click su aggiungi e allocare al massimo 15 gb per il file system (con file system ext4 con journaling), impostandolo come partizione primaria e selezionando come punto di mount /
+
+poi aggiungere la cartella home cliccando nuovamente su aggiungi
+questa volta selezionare come punto di mount /home.
+la partizione sarà logica(non cambiare in primaria)
+
+*creando la home separata è possibile reinstallare il sistema senza toccare i dati.
+basterà infatti reinstallare il sistema formattando SOLO la partizione contenente il file system "/"
+
+come ultima cosa impostare l'area di swap, cliccando su aggiungi e aggiungendo per esempio 1 gb di spazio se si ha 1 gb di memoria ram oppure 2 gb di spazio se si hanno 2 gb di ram ecc...
+impostare come punto di mount "area di swap" cliccare su ok
+
+dopodiche in basso comparirà la selezione per il boot loader
+questo bisognera lasciarlo in /dev/sda (non sda1 o sda2..)
