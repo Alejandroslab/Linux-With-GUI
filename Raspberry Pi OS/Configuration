@@ -1,0 +1,6 @@
+To enter the configuration guided mode in Terminal.
+Just open it and type:
+
+sudo raspi-config
+
+you will be able to config a lot of things (like Wif-fi etc.)
