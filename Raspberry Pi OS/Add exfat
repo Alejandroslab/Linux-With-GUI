@@ -1,0 +1,8 @@
+sudo apt-get update
+sudo apt-get updgrade
+
+sudo apt-get install exfat-fuse
+sudo apt get install exfat-utils
+
+After launching these commands you will be able to plugin you HD in exfat formato
+It will recognized 
