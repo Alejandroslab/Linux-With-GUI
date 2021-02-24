@@ -4,15 +4,18 @@ sudo apt-get update
 
 then install xrdp
 
-sudo apt-get install xrdp 
+sudo apt-get install xrdp
 
 after installation is completed everything is done!
+
+
+
 
 Go to Windows, open Remote Desktop Connection, put the IP or hostname of the machine
 
 (remember "hostname -I" or "hostname" commands)
 
-in the appearing window leave 'Xorg' 
+in the appearing window leave 'Xorg'
 and put your user and password.
 
 Done!
