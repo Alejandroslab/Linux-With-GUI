@@ -32,4 +32,6 @@ and put your user and password.
 
 Done!
 
+Remember to make it work that you have to logout with the desired user in the remote machine
+otherwise remote desktop will allow you to login but will shutdown immediately!
 (It will work on Debian, Raspberry Pi OS, Ubuntu, etc)
