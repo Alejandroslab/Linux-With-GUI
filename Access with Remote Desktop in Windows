@@ -7,7 +7,19 @@ then install xrdp
 sudo apt-get install xrdp
 
 after installation is completed everything is done!
+(sometimes xrdp will not start automatically (as in Debian KDE) therefore
+you may want to check status of the service with:
 
+systemctl status xrdp
+
+if it is not active, activate with
+
+sudo systemctl start xrdp
+
+then check again if the service is activate
+
+systemctl status xrdp
+)
 
 
 
