@@ -1,0 +1,11 @@
+If GUI does not start but you have just terminale
+first login with user and password
+
+then just launch
+
+startx
+
+
+N.B. if you type:
+
+sudo startx it will login in GUI as root. (not recommended)
