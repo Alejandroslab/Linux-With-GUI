@@ -38,5 +38,8 @@ otherwise remote desktop will allow you to login but will shutdown immediately!
 If the GUI starts only with the command 'startx' you have to logout as in the normal case
 you will get back to the terminal side and then can launch remote desktop.
 
+In Debian KDE even if GUI does not start per se, connecting via Remote desktop
+will make the GUI start in any case.
+
 
 (It will work on Debian, Raspberry Pi OS, Ubuntu, etc)
