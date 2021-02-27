@@ -1,9 +1,95 @@
-REMEMBER
+First install packages:
+
+sudo apt install apache2 mariadb-server libapache2-mod-php
+
+sudo apt install php-gd php-json php-mysql php-curl php-mbstring php-intl php-imagick php-xml php-zip
+
+sudo apt install php7.3-gd php7.3-json php7.3-mysql php7.3-curl php7.3-mbstring php7.3-intl php-imagick php7.3-xml php7.3-zip
+
+you will need to install the correct versions. If they are not correct nextcloud will not run
+
+
+We move to the apache folder
+
+cd /var/www/html
+
+and we download Nextcloud
+
+sudo wget https://download.nextcloud.com/server/releases/nextcloud-21.0.0.zip
+
+remember to check in the website the current version! (you will have to change the number at the end)
+you will also need to check that the packages in the prerequisites are comptabile with the Nextcloud version
+that you are installing
+
+
+we can now extract with 'unzip'
+
+sudo unzip nextcloud-21.0.0.zip
+
+
+we change now permission in order to make Nextcloud available to Apache:
+
+sudo chmod 750 nextcloud -R
+sudo chown www-data:www-data nextcloud -R
+
+
+
+Now we can create the MySQL Database to store the data:
+
+sudo mysql
+
+with this last command we will enter in Mysql environment with all its syntax
+Now we create a user
+
+CREATE USER 'nextcloud' IDENTIFIED BY 'password';
+
+you must put a strong password instead of the word password (but leave the single quotes)
+
+Proceed to create a DATABASE
+CREATE DATABASE nextcloud;
+
+now give the permission to the user created:
 
 GRANT ALL PRIVILEGES ON nextcloud.* TO 'nextcloud'@localhost IDENTIFIED BY 'MYPASSWORD';
 
-the quotes always must be single quotes like '' not smart quotes like ‘ ’
+
+REMEMBER!
+in this command:
+GRANT ALL PRIVILEGES ON nextcloud.* TO 'nextcloud'@localhost IDENTIFIED BY 'MYPASSWORD';
+
+the quotes always must be single quotes like '' and not smart quotes like ‘ ’
 
 you can see the difference because the smart quotes are a little bit inclined towards right.
 
-be careful
+
+now:
+
+
+FLUSH PRIVILEGES;
+
+and
+
+quit
+
+the command 'quit' will allow you to exit from mariadb
+
+
+
+
+
+
+Now you can access Nextcloud in a browser:
+
+https://IP/nextcloud
+
+or
+
+http://IP/nextcloud
+
+or
+
+https://hostname/nextcloud
+
+or
+
+http://hostname/nextcloud
