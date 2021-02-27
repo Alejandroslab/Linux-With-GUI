@@ -93,3 +93,5 @@ https://hostname/nextcloud
 or
 
 http://hostname/nextcloud
+
+(it seems that https is not automatically launched with Apache2)
