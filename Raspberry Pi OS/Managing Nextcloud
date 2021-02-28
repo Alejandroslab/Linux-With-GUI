@@ -1,0 +1,11 @@
+to access Nextcloud folders you have to remember that the default path of installation will be
+
+ /var/www/nextcloud
+
+ or
+
+ /var/www/html/nextcloud
+
+
+it is possible to move the folder afterwards (e.g. to an external drive connected to the raspberry)
+but it is quite tricky. therefore is suggested to specify the correct destination during installation
