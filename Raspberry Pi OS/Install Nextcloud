@@ -95,3 +95,20 @@ or
 http://hostname/nextcloud
 
 (it seems that https is not automatically launched with Apache2)
+
+
+
+
+Now just create the admin account inserting an username and a mypassword
+
+in 'Database User' 'Database password' and 'Database name' just put the ones
+typed before defining the SQL DATABASE
+therefore:
+
+user: nextcloud
+password: MYPASSWORD
+database name: nextcloud
+
+now just wait some minutes and it will finally open!
+
+finished.
