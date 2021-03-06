@@ -1,0 +1,3 @@
+After download it launch
+
+sudo dpkg -i package.deb
