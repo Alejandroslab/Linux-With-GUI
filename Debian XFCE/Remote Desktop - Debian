@@ -4,7 +4,7 @@ sudo apt-get update
 
 Now install xrdp:
 
-sudo apt install xrdp 
+sudo apt install xrdp
 
 Check status
 
@@ -12,7 +12,7 @@ sudo systemctl status xrdp
 
 Add user xrdp to ssl-cert
 
-sudo adduser xrdp ssl-cert  
+sudo adduser xrdp ssl-cert
 
 (evenutally configure your firewall (ufw or whatever))
 To check hostname and/or ip:
@@ -22,7 +22,7 @@ hostname
 hostname -I
 
 
-Now remote desktop on Windows. Type the hostname or IP 
+Now remote desktop on Windows. Type the hostname or IP
 
 Access with credetianls. But remember:
 
@@ -38,3 +38,7 @@ Debian seem to be more strict on authorisations.
 REMEMBER TO LOGOUT BEFORE ACCESS REMOTELY!!
 
 The same process can be done for Linux Mint (XFCE)
+
+
+remember! only root or sudo user can enter in a remote session.
+other account will be refused
