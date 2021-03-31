@@ -11,7 +11,19 @@ sudo apt-get install raspberrypi-ui-mods xinit xserver-xorg
 
 sudo reboot
 
-sudo apt install xrdp 
+sudo apt install xrdp
 
 systemctl show -p SubState --value xrdp
-sudo adduser xrdp ssl-cert  
+sudo adduser xrdp ssl-cert
+
+check ip and/or hostname:
+
+hostname -I
+
+hostname
+
+you can open the remote desktop app in windows or mac
+
+it will open a window leave 'xorg'
+
+then type in the raspberry pi credentials
