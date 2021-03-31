@@ -1,0 +1,6 @@
+go to:
+    * gconf-editor
+
+Follow apps>indicator-session
+Check “suppres_logout_restart_shutdown”.
+done
