@@ -1,0 +1,25 @@
+select advanced partitioning
+
+delete C:
+
+click on add and set your size  and set it as primary partition selectin as mount point
+/
+
+then add home folder clicking on add
+and select as mount
+/home
+
+the partition will be logic (don't change as primary)
+
+creating the separated 'home' folder is possible to reinstall the system without touching data
+you will have only to reinstall the system formatting only the partition containing
+the file system "/"
+
+as last thing set swap area clicking on add and adding like 1 gb of space if you have
+1 gb of ram or 2 if you have 2 gb  of ram
+
+set as mount point "swap area" and click ok.
+
+then on the bottom it will appear the selection for the boot loader
+
+you will have to leave it in /dev/sda (not sda1 or sda2)
