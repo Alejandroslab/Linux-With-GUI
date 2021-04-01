@@ -1,0 +1,12 @@
+you can use this:
+
+gtk-RecordMyDesktop
+
+the format will be .ogv
+
+to conver to avi use:
+
+
+apt-get install mencoder
+
+mencoder video.ogv -ovc xvid -oac mp3lame -xvidencopts pass=1 -o output.avi
