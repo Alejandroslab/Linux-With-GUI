@@ -1,0 +1,21 @@
+you can download themes for the login screen
+
+just open the menu and look for
+
+'Login Screen'
+
+then if the error regarding the Clock appears:
+
+Type Clock unavailable & qt-quickcontrols 2.5 not installed
+
+
+here is the solution:
+
+You have to change the version for QtQuick.Controls in the Clock.qml file to 1.1 (same as the one in Main.qml)
+I did the following and that made it work.
+
+sudo nano /usr/share/sddm/themes/McMojave/components/Clock.qml
+
+change the line import QtQuick.Controls 2.5 to import QtQuick.Controls 1.1
+
+Save and exit. Logout and login again, see if the theme is working now.
