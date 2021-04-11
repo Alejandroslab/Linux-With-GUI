@@ -1,0 +1,10 @@
+if some errores appears while
+
+sudo apt-get update
+
+then check the error
+sometimes you may need to update your sources list
+
+sudo vi /etc/apt/sources. list
+
+or use nano 
