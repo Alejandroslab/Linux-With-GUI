@@ -7,3 +7,6 @@ In order to make it usable you have to link your router to your Pihole and set i
 
 otherwise you can use PiHole just on some devices going in the network Settings
 and changing the IP of the DNS server
+
+
+You can also set the DNS server in your own VPN Settings (use pivpn or algo vpn)
