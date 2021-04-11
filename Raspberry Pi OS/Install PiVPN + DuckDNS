@@ -70,6 +70,9 @@ cat duck.log
 if 'OK' appears at the beginning of the command line then everythign went well.
 if 'KO' appears then something went wrong and you have to check your settings
 
+you can find install here:
+
+https://www.duckdns.org/install.jsp
 ______________________________
 
 then if you need to change your previous setting of your pivpn:
