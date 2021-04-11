@@ -1,2 +1,9 @@
 run this and follow the instruction
 curl -sSL https://install.pi-hole.net | bash
+
+
+then the PiHole DNS server will be installed
+In order to make it usable you have to link your router to your Pihole and set it as a DNS Server
+
+otherwise you can use PiHole just on some devices going in the network Settings
+and changing the IP of the DNS server
