@@ -1,0 +1,17 @@
+Simply disconnect from other devices the keyboard
+then pair it on Debian
+It will show a PIN. Just click OK on it.
+
+everything should work well!
+(you may need to previous install the libinput stuff for magic trackpad. not sure about this)
+
+if you have the magic keyboard with numeric pad you can enable it pressing
+the key above the '7' in the numeric pad (that in Mac will be a key to delete).
+This in Debian will wor as a swtich to enable the numeric pad.
+
+If you don't enable it, it will not work and will only work the keys
+4,8,6,2 as directional arrows
+
+
+
+This has been tested on Debian 10 Buster KDE

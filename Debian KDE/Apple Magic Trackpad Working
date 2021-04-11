@@ -1,0 +1,54 @@
+first: disconnect the magic trackpad from other devices(e.g. if you have previously linked
+to a Mac)
+
+then turn off it
+
+now:
+
+You need to install the libinput gestures
+
+first add your user to input group:
+
+sudo gpasswd -a $USER input
+
+where $USER will automatically recall your username
+now
+
+reboot your machine!
+it is mandatory otherwise it will not work
+
+after restarting
+
+
+install the necessary dependecies
+
+
+sudo apt-get install xdotool wmctrl git python3 libinput-tools build-essential
+
+mkdir ~/src/
+
+cd ~/src/
+
+git clone https://github.com/bulletmark/libinput-gestures.git
+cd libinput-gestures
+
+sudo make install
+
+libinput-gestures-setup autostart
+
+the autostart will allow to automatically start the service at login 
+
+libinput-gestures-setup start
+
+Read /etc/libinput-gestures.conf to see other options
+
+done!
+
+now it will work
+
+(maybe these steps are also necessary if you want to work with apple magic keyboard)
+
+just turn on your apple trackpad
+click on bluetooth and pair the device (no need to specify any PIN)
+
+and you are done!
