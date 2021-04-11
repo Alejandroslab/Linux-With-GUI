@@ -115,3 +115,7 @@ be created with the duckdns domains already included.
 
 done! you can now connect with Dynamic DNS. This means that you will alwyas be able to connect even if your public IP changes
 (as in most of cases)
+
+
+(remember to forward the port 1194 from your router to the raspberyy pi!)
+Just forward the port 1194 from your router to the raspberry
