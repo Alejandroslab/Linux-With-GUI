@@ -1,0 +1,117 @@
+curl -L https://install.pivpn.io | bash
+
+just run this code and follow the instruction
+
+if you need to change something just
+
+sudo nano /etc/openvpn/easy-rsa/pki/Default.txt
+
+(you have to use nano or vi as you cannot access to the 'pki' folder (even if you can see it))
+you can set for example duckdns and install it on raspberyy
+
+
+(remember to forward the port 1194 from your router to the raspberyy pi!)
+
+________
+to install duckdns:
+
+First, check if cron is available for your linux:
+ps -ef | grep cr[o]n
+
+then check if you have curl:
+curl
+
+then:
+
+mkdir duckdns
+cd duckdns
+vi duck.sh
+
+
+paste this inside:
+
+echo url="https://www.duckdns.org/update?domains=exampledomain&token=a7c4d0ad-114e-40ef-ba1d-d217904a50f2&ip=" | curl -k -o ~/duckdns/duck.log -K -
+where 'exampledomains' is the name of your subdomain
+
+e.g.
+
+mysubdomain.duckdns.org
+
+is 'mysubdomain'
+
+after the term 'token' just paste the token that you will see in duckdns homepage (after registration)
+leave the last characters '&ip='
+
+now save the file (in vi hit ESC then :wq! then ENTER)
+
+this script will make a https request and log the output in the file duck.log
+
+
+now make the duck.sh file executeable
+chmod 700 duck.sh
+
+next we will be using the cron process
+crontab -e
+
+select '1' for nano
+
+then go to the last line and add this line:
+
+*/5 * * * * ~/duckdns/duck.sh >/dev/null 2>&1
+
+now save the file and test it:
+
+./duck.sh
+
+and:
+
+cat duck.log
+
+if 'OK' appears at the beginning of the command line then everythign went well.
+if 'KO' appears then something went wrong and you have to check your settings
+
+______________________________
+
+then if you need to change your previous setting of your pivpn:
+
+sudo nano /etc/openvpn/easy-rsa/pki/Default.txt
+
+the config file will be:
+
+client
+dev tun
+proto udp
+remote 192.168.1.0 1194
+....
+
+you can change the 'remote' that corresponds to your public IP with
+a duckdns subdomain
+
+this will become:
+
+client
+dev tun
+proto udp
+remote mysubdomain.duckdns.org 1194
+....
+
+save and exit
+
+NOW! in your old .ovpn configuration file you have to set the new 'public IP' that in this case
+will coincide with the duckdns dns.
+
+open your preexisting .ovpn configuration files (those for your clients and created with the process 'pivpn add')
+
+change accordingly as before:
+
+client
+dev tun
+proto udp
+remote mysubdomain.duckdns.org 1194
+....
+
+if you add new users there will be no need to change the .ovpn files as they will
+be created with the duckdns domains already included.
+
+done! you can now connect with Dynamic DNS. This means that you will alwyas be able to connect even if your public IP changes
+(as in most of cases)

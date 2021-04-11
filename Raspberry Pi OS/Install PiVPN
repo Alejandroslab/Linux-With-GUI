@@ -1,6 +1,0 @@
-curl -L https://install.pivpn.io | bash
-
-
-there is a configration file in /etc/pivpn/openvpn
-
-setupVars.conf
