@@ -1,0 +1,6 @@
+At the moment keepassxc is the most followed keepass application
+for linux (and also mac)
+
+in Debian just install it with:
+
+sudo apt-get install keepassxc
