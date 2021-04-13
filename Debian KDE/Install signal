@@ -1,5 +1,24 @@
 Follow the instruction:
 
+sudo apt install curl
+
+
+curl -s https://updates.signal.org/desktop/apt/keys.asc | sudo apt-key add -
+
+
+echo "deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main" | sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
+
+
+sudo apt update && sudo apt install signal-desktop
+
+After running the commands above, Signal should be installed and ready to use….
+although the package repository looks like it’s for Xenial, it should also work!
+
+DONE!
+
+
+or you can use this (but apparently it does not work anymore)
+
 # 1. Install our official public software signing key
 wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
 sudo mv signal-desktop-keyring.gpg /usr/share/keyrings/
