@@ -146,3 +146,71 @@ tap with 3 fingers: middle click
 you can also invert 'lrm' to 'lmr' (even this is not the usual behaviour in Mac)
 
 REMEMBER! After editing this file REBOOT your system to make the changes PERMANENT
+
+
+________
+
+ENABLE PINCH TO ZOOM AND OTHER GESTURES
+as we have already install libinput-gestures we can now add gestures
+
+first be sure to stop the program with:
+
+libinput-gestures-setup stop
+
+you can check the status with:
+
+libinput-gestures-setup status
+
+then set the app as a systemd user service as this will work better as stated
+in the githun project. 'The systemd user
+service option for libinput-gestures was added in Feb 2021
+and provides more robust management and better logging than
+the desktop so is now the preferred choice. '
+
+libinput-gestures-setup service
+
+if you have setup it firstly as a desktop service a message will appear notifying that
+the desktop config file has been deleted
+
+
+
+
+now, after stopping open the config file:
+
+cd /etc
+
+sudo nano libinput-gestures.conf
+
+go to the end of the file and add these 2 lines :
+
+# zoom
+gesture pinch   in    2  xdotool key ctrl+minus
+gesture pinch   out   2  xdotool key ctrl+plus
+
+you can also add more stuff following the syntax as before
+remembering that the numnber correspond to the number of fingers for the gestures
+
+
+after that just enable the appt to automatically run in the background when you Login
+libinput-gestures-setup autostart
+
+and start the app immediately:
+
+libinput-gestures-setup start
+
+now your gestures work!
+
+to upgrade your libinput gesture:
+
+# cd to source dir, as above
+git pull
+sudo make install (or sudo ./libinput-gestures-setup install)
+libinput-gestures-setup restart
+
+
+if you suspend the system and then boot up again
+linpiut gesture could not load correctly and the gestures will not work therefore:
+
+libinput-gestures-setup restart
+
+you can add it to your xsession file in order to automatically run the program

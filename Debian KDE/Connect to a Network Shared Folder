@@ -1,0 +1,27 @@
+in Dolphin
+open 'Network'
+
+then click on 'Add Network Folder'
+then select Microsoft Windows network drive
+
+click on Next
+
+in 'Name' just type a label for your network folder
+in 'Server' type the IP or hostname of your server in this way:
+
+myserver.local
+
+in 'Folder' type the location desired
+
+for example
+
+\home
+
+if you know that the path
+
+myserver.local\home
+
+exists
+
+
+DONE!
