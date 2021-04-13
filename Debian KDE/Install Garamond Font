@@ -1,0 +1,4 @@
+Garamond Font is not added in linux. you can install:
+
+
+sudo apt-get install fonts-ebgaramond-extra
