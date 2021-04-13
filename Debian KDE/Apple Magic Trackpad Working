@@ -214,3 +214,29 @@ linpiut gesture could not load correctly and the gestures will not work therefor
 libinput-gestures-setup restart
 
 you can add it to your xsession file in order to automatically run the program
+
+
+OTHER GESTURES
+you can add more gestures in the
+
+sudo nano /etc/libinput-gestures.conf
+
+like these  ones
+
+#swipe up to show all windows opened
+gesture swipe up 4 xdotool key ctrl+F10
+gesture swipe down 4 xdotool key ctrl+F10
+
+ctrl+f10 will open the windows selector (will display all opened windows)
+
+#show desktop
+gesture pinch out 4 xdotool key ctrl+F12
+
+ctrl+f12 will temporary show desktop (as in Mac) putting aside all Windows
+
+cool!
+
+the problem is that if you suspend the system your gesture will not load and you will have to
+load it manually just running:
+
+libinput-gestures-setup restart
