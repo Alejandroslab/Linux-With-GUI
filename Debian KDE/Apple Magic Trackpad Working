@@ -36,7 +36,7 @@ sudo make install
 
 libinput-gestures-setup autostart
 
-the autostart will allow to automatically start the service at login 
+the autostart will allow to automatically start the service at login
 
 libinput-gestures-setup start
 
@@ -52,3 +52,97 @@ just turn on your apple trackpad
 click on bluetooth and pair the device (no need to specify any PIN)
 
 and you are done!
+
+
+__________________________
+
+ENABLE SCROLLING
+
+to enable scrolling you will need a driver called 'Linux Apple Magic Mouse 2 and Magic Trackpad 2 Driver'
+
+you can find it in github:
+firs install dkms
+sudo apt-get install dkms
+git clone https://github.com/rohitpid/Linux-Magic-Trackpad-2-Driver.git
+cd Linux-Magic-Trackpad-2-Driver/scripts
+chmod u+x install.sh
+sudo ./install.sh
+
+now if you want to change something first install 'xinput' package
+
+sudo apt-get install xinput
+
+now run it:
+
+xinput or xinput --list
+
+you will see all the devices with their names. In this case the relevant one in called
+'Apple Inc. Magic Trackpad 2'
+
+to see all the properites just type:
+
+xinput --list-props 'Apple Inc. Magic Trackpad 2'
+
+if you see 'libinput' at the very beginning of each line means that libinput is in charge of the
+trackpad
+
+now in case for example you want to enable the Natural Scrolling (that will invert
+the scrolling direction), you have just to type:
+
+xinput --set-prop 'Apple Inc. Magic Trackpad 2' "libinput Natural Scrolling Enabled" 1
+
+you have to enable this in case you want the same experience of the Mac
+
+you have also to enable tapping:
+
+xinput --set-prop 'Apple Inc. Magic Trackpad 2' "Tapping Enabled" 1
+
+done!
+
+The problem with these commands is that they will not survive a reboot
+
+
+TO MAKE IT PERMANENT:
+you need to open the so called 'xorg configuration files' and edit the option
+in that file.
+To do that just go here:
+cd /usr/share/X11/xorg.conf.d
+
+and open the '40-libinput.conf' file:
+
+sudo nano 40-libinput.conf
+
+
+inside this file look for:
+
+Section "InputClass"
+Identifier "libinput touchpad catchall"
+...
+
+and at the end of the section (but before the 'EndSection') add your options:
+
+In this case the section will be like th
+
+Section "InputClass"
+        Identifier "libinput touchpad catchall"
+        MatchIsTouchpad "on"
+        MatchDevicePath "/dev/input/event*"
+        Driver "libinput"
+        Option "TappingButtonMap" "lrm"
+        Option "Tapping" "on"
+        Option "NaturalScrolling" "true"
+
+EndSection
+
+where the Option Tapping on will enable tapping, the NaturalScrolling true will enable natural scrolling
+
+and the TappingButtonMap will change the order of Tapping
+with lrm (left, right, middle)
+you will have:
+tap with 1 finger: left Click
+tap with 2 fingers: right click
+tap with 3 fingers: middle click
+
+you can also invert 'lrm' to 'lmr' (even this is not the usual behaviour in Mac)
+
+REMEMBER! After editing this file REBOOT your system to make the changes PERMANENT
