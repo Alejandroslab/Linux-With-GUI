@@ -240,3 +240,5 @@ the problem is that if you suspend the system your gesture will not load and you
 load it manually just running:
 
 libinput-gestures-setup restart
+
+find where to put this command in order to run it after suspension
