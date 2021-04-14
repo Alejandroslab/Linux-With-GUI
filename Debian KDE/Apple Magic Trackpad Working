@@ -235,10 +235,19 @@ gesture pinch out 4 xdotool key ctrl+F12
 ctrl+f12 will temporary show desktop (as in Mac) putting aside all Windows
 
 cool!
-
+______
 the problem is that if you suspend the system your gesture will not load and you will have to
 load it manually just running:
 
 libinput-gestures-setup restart
 
 find where to put this command in order to run it after suspension
+
+if it does not work just run first:
+
+libinput-gestures-setup start
+
+and then:
+libinput-gestures-setup restart
+
+then it should go back to work as usual
