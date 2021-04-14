@@ -1,0 +1,26 @@
+Just go to
+Tools->Customize->keyboard
+
+in the first table scroll the list and look for these shortcuts:
+
+ctrl++
+
+ctrl+-
+
+assign ctrl++ to 150%
+and ctrl+- to 75%
+
+you have then a partial way to set up a zoom
+as the zoom will not increase or decrease with the pinch
+
+anyways this will work with the trackpad as in libinput config file
+
+we have set up
+
+gesture pinch in 2 xdotool keys ctrl +
+
+and
+
+gesture pinch out 2 xdottol keys ctrl -
+
+see the 'Apple Magic Trackpad' file in this repo
