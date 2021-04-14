@@ -1,0 +1,23 @@
+to assing win+e command to open the file explorer (that in KDE is dolphin)
+just open:
+
+custom shortcuts:
+click right on the left side of the windows (in the column)
+
+select:
+
+New->Global Shortcut->Commnad/url
+
+Set a name like 'Dolphin'
+Click on the tab 'Trigger'
+
+Click inside the box shortcut and press 'win+e'
+then click on the tab 'Action'
+in the text box 'Command/URL'
+type:
+
+dolphin
+
+Click on appply and ok
+
+DONE!
