@@ -1,0 +1,11 @@
+download and install Remmina
+
+sudo apt-get install remmina
+
+then type the hostname
+
+mywindowsmachine
+
+click on connect and finally type in your credentials (sometimes you may need
+to type your old password instead of the new one if you have change your
+login passwrod. This is a known problem in Windows)
