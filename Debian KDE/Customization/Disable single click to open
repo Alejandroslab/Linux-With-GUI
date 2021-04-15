@@ -1,0 +1,6 @@
+To disable this. It depends on the version of your Plasma
+from Plasma 5.13 or later
+
+open System Settings->Desktop Behaviour->Workspace->Check 'Double click to open files and folders'
+
+done!
