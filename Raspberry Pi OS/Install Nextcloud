@@ -112,3 +112,14 @@ database name: nextcloud
 now just wait some minutes and it will finally open!
 
 finished.
+
+
+TO UNINSTALL:
+
+Delete the Database,
+remove the /var/www/ files of Nextcloud
+(root-dir of your Nextcloud installation)
+and remove the data folder
+delete also the logs.
+
+anyways apache and php will stay
