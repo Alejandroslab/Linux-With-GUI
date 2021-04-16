@@ -1,0 +1,18 @@
+REMEMBER! if you installed PiVPN on or after 17/02/2020 static IPs are set by default
+
+anyways you can check here:
+
+cd /etc/openvpn/ccd
+
+if you see inside with 'ls' the list of the user
+then you will know that every user has its own static ip
+
+you can check further looking inside
+
+sudo nano myvpnuser
+
+you will find something like
+ifconfig-push IP subnet
+
+e.g.
+ifconfig-push 10.8.0.3 255.255.255.0
