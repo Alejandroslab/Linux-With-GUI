@@ -11,3 +11,40 @@ Chain FORWARD (policy ACCEPT 82746 packets, 36M bytes)
 
 Chain OUTPUT (policy ACCEPT 74790 packets, 36M bytes)
  pkts bytes target     prot opt in     out     source               destination
+
+
+this is the default settings
+you see here 3 parts called 'chains': INPUT, FORWARD AN OUTPUT
+they have all policy as 'ACCEPT'
+this means that if a packet reaches the end of a chain it will be accepted.
+'Reaches the end of the chain' means that the software will check all the rules
+from the beginning to the end, following a linear order.
+
+these are the options:
+
+-A or append allows to add a rule at the end of the chain
+
+-D or delete allows to remove the rule identified by a number
+    -D CHAINNAME number_of_rule
+
+-L will list the rules of the chain
+    -L CHAINNAME
+
+-F allows to empty a chain
+    -F CHAINNAME
+
+
+the option to describe the packet:
+-j is the behaviour als called 'policy' could be (DROP or ACCEPT)
+-p is the protocol
+-s is the source IP
+-d is the destination IP
+-i is the type of interface (eth0 wlan0 or tun0)
+-g the chain to go forward
+-t the table (the default one it the table filter)
+
+e.g.
+
+This commands allows to block any packets outgoing to a particular ip
+
+iptables -A OUTPUT -d 192.168.1.25 -j DROP
