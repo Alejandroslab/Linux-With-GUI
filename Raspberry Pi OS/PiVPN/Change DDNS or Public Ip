@@ -1,0 +1,1 @@
+You will need to change /etc/openvpn/easy-rsa/pki/Default.txt and your .ovpn files if you have already generated them.
