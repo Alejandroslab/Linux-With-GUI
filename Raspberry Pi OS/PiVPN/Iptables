@@ -32,6 +32,9 @@ these are the options:
 -D or delete allows to remove the rule identified by a number
     -D CHAINNAME number_of_rule
 
+  where number_of_rule is the number of the line
+  therefore the rule number one will be the first at top (that corresponds to the first line)
+
 -L will list the rules of the chain
     -L CHAINNAME
 
