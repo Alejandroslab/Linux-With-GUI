@@ -65,3 +65,6 @@ Therefore the command will be the same but you will need to use the FORWARD chai
 sudo iptables -A FORWARD -d 192.168.1.25 -j DROP
 
 you must be root to add these rules!
+
+in Windows you can scan your network to see your devices with
+angry ip
