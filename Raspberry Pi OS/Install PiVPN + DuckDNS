@@ -122,3 +122,14 @@ done! you can now connect with Dynamic DNS. This means that you will alwyas be a
 
 (remember to forward the port 1194 from your router to the raspberyy pi!)
 Just forward the port 1194 from your router to the raspberry
+
+
+________
+to check if openvpn is running:
+
+sudo service openvpn status
+
+_______________
+to add a new user:
+
+pivpn add
