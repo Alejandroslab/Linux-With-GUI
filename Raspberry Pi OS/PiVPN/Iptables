@@ -1,0 +1,13 @@
+check your current iptables (this command is for IPV4)
+
+sudo iptables -L -nv
+
+
+Chain INPUT (policy ACCEPT 89492 packets, 17M bytes)
+ pkts bytes target     prot opt in     out     source               destination
+
+Chain FORWARD (policy ACCEPT 82746 packets, 36M bytes)
+ pkts bytes target     prot opt in     out     source               destination
+
+Chain OUTPUT (policy ACCEPT 74790 packets, 36M bytes)
+ pkts bytes target     prot opt in     out     source               destination
