@@ -1,0 +1,20 @@
+just:
+
+chmod a+x myapp.AppImage
+
+then run:
+
+./myapp.AppImage
+
+
+
+it is known that tutanota provides appimage format for linux
+
+if there is some error regarding the sandbox like
+'The SUID sandbox helper binary was found but is not configure correctly.
+Rather than run without sandboxing I'm aborting now..'
+
+to solve that you can run the app (after launching the previous commands) with the '--no-sandbox' argument
+in this way:
+
+./myapp.AppImage --no-sandbox
