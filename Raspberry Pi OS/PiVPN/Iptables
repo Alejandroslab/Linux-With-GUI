@@ -14,11 +14,16 @@ Chain OUTPUT (policy ACCEPT 74790 packets, 36M bytes)
 
 
 this is the default settings
-you see here 3 parts called 'chains': INPUT, FORWARD AN OUTPUT
+you see here 3 parts called 'chains': INPUT, FORWARD and OUTPUT
 they have all policy as 'ACCEPT'
 this means that if a packet reaches the end of a chain it will be accepted.
 'Reaches the end of the chain' means that the software will check all the rules
 from the beginning to the end, following a linear order.
+
+REMEMBER! the OUTPUT chain applies to locally generated packets
+For packets that are routed via the system you have to use
+FORWARD chain!
+
 
 these are the options:
 
