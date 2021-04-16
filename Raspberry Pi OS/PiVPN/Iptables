@@ -47,4 +47,6 @@ e.g.
 
 This commands allows to block any packets outgoing to a particular ip
 
-iptables -A OUTPUT -d 192.168.1.25 -j DROP
+sudo iptables -A OUTPUT -d 192.168.1.25 -j DROP
+
+you must be root to add these rules!
