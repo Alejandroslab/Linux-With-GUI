@@ -53,8 +53,15 @@ the option to describe the packet:
 
 e.g.
 
-This commands allows to block any packets outgoing to a particular ip
+This commands allows to block any LOCAL packets outgoing to a particular ip
 
 sudo iptables -A OUTPUT -d 192.168.1.25 -j DROP
+
+if you need to block ALL packets that are passing in the machine in which
+are you setting the iptables commands, directed to a particular IP
+you have to use the FORWARD chain.
+Therefore the command will be the same but you will need to use the FORWARD chain
+
+sudo iptables -A FORWARD -d 192.168.1.25 -j DROP
 
 you must be root to add these rules!
