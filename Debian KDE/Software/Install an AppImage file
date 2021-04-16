@@ -1,6 +1,6 @@
 just:
 
-chmod a+x myapp.AppImage
+sudo chmod a+x myapp.AppImage
 
 then run:
 
