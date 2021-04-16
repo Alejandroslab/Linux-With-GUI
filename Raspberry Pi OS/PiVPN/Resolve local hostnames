@@ -1,0 +1,24 @@
+edit
+
+sudo nano /etc/openvpn/server.conf
+
+replace every
+push "dhcp-option DNS [...]" with a SINGLE
+
+push "dchp-option DNS 192.168.1.309" (where 192.168.1.309 is your gateway)
+
+then restart openvpn
+
+sudo systemctl restart openvpn
+
+THIS SEEMS TO NOT WORK IN WINDOWS as windows does not resolve local hostnames anyways
+
+or you can change your
+
+/etc/hosts file and add manually line by line something like this:
+
+192.168.1.250 Mypc
+192.168.1.290 Mybrotherpc
+...
+
+IPaddress hostname
