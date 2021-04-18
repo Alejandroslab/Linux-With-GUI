@@ -1,17 +1,24 @@
 When booting up from the Live USB or (.iso in case of a VM)
 it could happen that it will hang on a black screen
 
-to solve it just press (or pass in case of a vm)
+To see what is happening while loading and in a polite text version just type
+Shift+Esc
+
+the loading bar will be replaced by lines of terminal that
+notifies about what is happening (loading grub, modules, network etc..)
+
+
+Anyways, to solve it just press (or pass the command in case of a vm)
 
 Ctrl + alt + F2
 
 this will open a terminal
 
-now it will ask for a user and password:
+now it will ask to login with credentials:
 
-the user is: neon
+In Kde Neon the user is: neon
 the password:
-(is blank. this means that you have to leave it pressing enter without inserting any password)
+(is blank. this means that you have to leave it pressing 'enter' without inserting any password)
 
 
 now it will open the terminal session
@@ -20,5 +27,5 @@ now to launch the GUI just type:
 
 startx
 
-DONE! it will launch the live usb of KDE Neon.
-Then you can choose to install it.
+DONE! This will launch the live usb of KDE Neon.
+Then you can choose to install it as usual.
