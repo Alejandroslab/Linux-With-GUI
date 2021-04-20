@@ -1,0 +1,20 @@
+Just type:
+sudo pacman -S openssh
+
+DONE!
+now check the status as this should be disbale by default
+
+sudo systemctl status sshd.service
+
+if you need to change the config. file just type:
+
+sudo nano /etc/ssh/sshd_config
+
+now launch the service:
+
+sudo systemctl enable sshd.service
+
+sudo systemctl start sshd.service
+
+DONE!
+now you can connect to your Manjaro machine
