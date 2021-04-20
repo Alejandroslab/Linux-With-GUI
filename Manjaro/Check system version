@@ -1,0 +1,3 @@
+cat /etc/manjaro-release
+
+cat /etc/*release
