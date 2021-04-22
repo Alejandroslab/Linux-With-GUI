@@ -2,6 +2,8 @@ curl -L https://install.pivpn.io | bash
 
 just run this code and follow the instruction
 
+__________________
+
 if you need to change something just
 
 sudo nano /etc/openvpn/easy-rsa/pki/Default.txt

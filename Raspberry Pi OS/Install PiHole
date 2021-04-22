@@ -10,3 +10,7 @@ and changing the IP of the DNS server
 
 
 You can also set the DNS server in your own VPN Settings (use pivpn or algo vpn)
+
+you can access to dashboard with:
+
+http://IP_or_Hostname/admin
