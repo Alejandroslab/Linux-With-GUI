@@ -58,9 +58,15 @@ this script will make a https request and log the output in the file duck.log
 
 
 now make the duck.sh file executeable
-chmod 700 duck.sh
+sudo chmod 700 duck.sh
 
 next we will be using the cron process
+to check your existing cron rules just type
+
+crontab -l
+
+now add it if there is nothing:
+
 crontab -e
 
 select '1' for nano
