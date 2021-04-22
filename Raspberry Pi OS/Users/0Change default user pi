@@ -23,3 +23,11 @@ usermod -m -d /home/<new_user> <new_user>
 e.g.
 
 usermod -m -d /home/mike mike
+
+
+after change your user you can check 'Autologin with 'pi' user' in 'Raspberry Pi Configuration'
+in Preferences
+
+Even if it is reported 'pi' user the system will boot in your pi renamed user!
+
+that's it!
