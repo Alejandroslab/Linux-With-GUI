@@ -1,1 +1,6 @@
-You will need to change /etc/openvpn/easy-rsa/pki/Default.txt and your .ovpn files if you have already generated them.
+You will need to change
+
+/etc/openvpn/easy-rsa/pki/Default.txt
+
+access it directly with nano because you don't have permissions to enter in the folder directly
+and your .ovpn files if you have already generated them.
