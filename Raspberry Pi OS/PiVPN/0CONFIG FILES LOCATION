@@ -1,5 +1,5 @@
 For public ip
-/etc/openvpn/easy-rsa/pki/Default.txt
+sudo nano /etc/openvpn/easy-rsa/pki/Default.txt
 
 for server config:
 sudo nano /etc/openvpn/server.conf
@@ -16,4 +16,4 @@ therefore you have to reinstall PiVPN (unistall it before)
 
 to uninstall:
 
-pivpn -u 
+pivpn -u
