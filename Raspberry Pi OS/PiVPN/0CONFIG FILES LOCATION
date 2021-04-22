@@ -4,5 +4,9 @@ For public ip
 for server config:
 sudo nano /etc/openvpn/server.conf
 
+and:
+
+sudo nano /etc/pivpn/openvpn/setupVars.conf
+
 for clients certificates:
 /etc/openvpn/ccd
