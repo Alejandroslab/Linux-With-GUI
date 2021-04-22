@@ -104,7 +104,7 @@ NOW! in your old .ovpn configuration file you have to set the new 'public IP' th
 will coincide with the duckdns dns.
 
 open your preexisting .ovpn configuration files (those for your clients and created with the process 'pivpn add')
-
+(YOU CAN ONLY CHANGE YOUR PUBLIC IP in your ovpn files created. Other settings must be done in the server)
 change accordingly as before:
 
 client
