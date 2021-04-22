@@ -8,7 +8,7 @@ and:
 
 sudo nano /etc/pivpn/openvpn/setupVars.conf
 
-for clients certificates:
+for clients certificates go to:
 /etc/openvpn/ccd
 
 if you change the hostname of your raspberry pivpn might not work properly
