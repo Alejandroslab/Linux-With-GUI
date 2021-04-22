@@ -1,0 +1,25 @@
+first if you have not done it already set a password for root
+
+sudo passwd root
+
+then go to preferences 'Raspberry Pi Configuration' and click on 'Auto login'
+check 'Disabled'
+
+reboot your system
+
+now type in user: root
+and in the password your password
+
+it will open the root desktop!
+
+from there open terminal and type:
+
+usermod -l <new_user> pi
+
+now rename the home directory:
+
+usermod -m -d /home/<new_user> <new_user>
+
+e.g.
+
+usermod -m -d /home/mike mike
