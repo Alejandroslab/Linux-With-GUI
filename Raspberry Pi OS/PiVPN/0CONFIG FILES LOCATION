@@ -1,0 +1,8 @@
+For public ip
+/etc/openvpn/easy-rsa/pki/Default.txt
+
+for server config:
+sudo nano /etc/openvpn/server.conf
+
+for clients certificates:
+/etc/openvpn/ccd
