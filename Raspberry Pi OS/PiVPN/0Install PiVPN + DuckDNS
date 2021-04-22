@@ -1,6 +1,13 @@
 curl -L https://install.pivpn.io | bash
 
-just run this code and follow the instruction
+just run this code and follow the instructions
+
+In the selection of public IP or 'public DNS Name'
+choose 'public DNS name' if you have a DDNS (if you have not a static Public IP)
+and type it. e.g. if you have duckdns type:
+
+mysubdomain.duckdns.org
+
 
 __________________
 
