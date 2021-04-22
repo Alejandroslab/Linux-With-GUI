@@ -1,0 +1,11 @@
+sudo deluser -remove-home user
+
+where 'user' is the username that you want to delete. Doing this will remove also the 'Home' folder
+
+if you don't want to remove the home folder:
+
+sudo deluser user
+
+you can then remove home folder separately with:
+
+sudo rm -r /home/username
