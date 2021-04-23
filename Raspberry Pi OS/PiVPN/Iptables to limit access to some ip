@@ -68,3 +68,12 @@ you must be root to add these rules!
 
 in Windows you can scan your network to see your devices with
 angry ip
+
+Finally if you want the rules to autostart when rebooting
+you may need iptables-persistent
+
+sudo apt-get install iptables-persistent
+
+anyways this should usually autoinstalled along with pivpn
+therefore you may not need. Anyways launch it to be sure that you have it
+(if it is already installed you will be notified and it will not be reinstalled)
