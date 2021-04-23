@@ -1,0 +1,13 @@
+pivpn add
+
+follow the instructions, provide a password and DONE
+
+the certificate with extension .ovpn
+will be created in the folder 'ovpns'
+
+(In sftp you cannot be able to download it
+Therefore first change permissions with:
+
+sudo chmod 777 mycertificate.ovpn
+
+then you can transfer it)
