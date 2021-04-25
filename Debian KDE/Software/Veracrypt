@@ -23,3 +23,7 @@ you will see:
 In this case you have to select /dev/sdb2 and not the whole device '/dev/sdb'
 
 you will then find the mounted volume in Dolphin
+
+REMEMBER! In Mac it will first ask for the Mac Password and then for the
+device password
+In Linux it will first ask for the device password and then for the User password
