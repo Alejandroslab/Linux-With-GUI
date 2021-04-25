@@ -1,0 +1,9 @@
+just download the .deb package for Debian and
+
+run it as usual:
+
+sudo dpkg -i veracrypt.... .deb
+
+done!
+
+you will find it in the menu!
