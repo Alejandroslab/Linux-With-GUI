@@ -7,3 +7,19 @@ sudo dpkg -i veracrypt.... .deb
 done!
 
 you will find it in the menu!
+
+REMEMBER! If you have an hd or small usb that
+has 2 volumes inside just select the one that has the biggest size!
+
+this means when you click on 'Select Device'
+
+you will see:
+
+/dev/sdb
+
+  /dev/sdb1  100 mb
+  /dev/sdb2  29.6 gb
+
+In this case you have to select /dev/sdb2 and not the whole device '/dev/sdb'
+
+you will then find the mounted volume in Dolphin
