@@ -1,0 +1,17 @@
+You can safely install PiVPN on the same Raspberry Pi as your Pi-hole install,
+and point your VPN clients to the IP of your Pi-hole so they get ad blocking, etc.
+(replace 192.168.23.211 with the LAN IP of your Raspberry Pi).
+
+Note that if you install PiVPN after Pi-hole,
+your existing Pi-hole installation will be detected and
+the script will ask if you want to use it as the DNS for the VPN, so you won't need to go through all these steps.
+
+    Edit the server config with sudo nano /etc/openvpn/server.conf
+    Remove every push "dhcp-option DNS [...]" line
+    Add this line push "dhcp-option DNS 192.168.23.211" to point clients to the PiVPN IP
+    Save the file and exit
+    Restart openvpn with
+    sudo systemctl restart openvpn
+    Run
+    pihole -a -i local
+    to tell Pi-hole to listen on all interfaces
