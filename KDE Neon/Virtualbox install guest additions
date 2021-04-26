@@ -1,0 +1,3 @@
+the virtual cd may not work therefore:
+
+sudo apt install virtualbox-guest-x11
