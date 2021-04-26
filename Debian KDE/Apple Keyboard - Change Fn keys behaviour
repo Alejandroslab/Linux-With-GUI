@@ -1,0 +1,23 @@
+This has been tested with Apple Magic Keyboard 2
+
+you can find the setting here:
+
+cd /sys/module/hid_apple/parameters
+
+then sudo nano fnmode
+
+you will find the number '1'
+this means that is enabled the function keys (multimedia will have preference) by default
+
+if you want to disable you have just to replace with '2'
+and your fn key will work as in the old systems
+
+to be faster you can just run:
+
+echo 2 | sudo tee /sys/module/hid_apple/parameters/fnmode
+
+if you want to switch it again just change the number:
+
+echo 1 | sudo tee /sys/module/hid_apple/parameters/fnmode
+
+this command will basically replace the number in the file
