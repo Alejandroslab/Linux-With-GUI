@@ -1,0 +1,7 @@
+just go to to
+'Preferences'->'Raspberry Pi Configuration'
+then 'Interfaces' and enable SSH
+
+otherwise:
+
+sudo systemctl enable ssh
