@@ -1,0 +1,8 @@
+sudo raspi-config
+then Network Options then hostname
+
+
+otherwise you can do with the GUI
+going to:
+
+Preferences->Raspberry pi configurations
