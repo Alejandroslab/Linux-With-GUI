@@ -2,7 +2,7 @@ first if you have not done it already set a password for root
 
 sudo passwd root
 
-then go to preferences 'Raspberry Pi Configuration' and click on 'Auto login'
+then go to preferences 'Raspberry Pi Configuration' and near to 'Auto login'
 check 'Disabled'
 
 reboot your system
@@ -11,6 +11,10 @@ now type in user: root
 and in the password your password
 
 it will open the root desktop!
+
+
+(If it does not load properly you can anyways open a terminal with the
+shortcut ctrl + alt + t)
 
 from there open terminal and type:
 
@@ -24,10 +28,15 @@ e.g.
 
 usermod -m -d /home/mike mike
 
+Now reboot!
 
-after change your user you can check 'Autologin with 'pi' user' in 'Raspberry Pi Configuration'
+After changing your username you can check 'Autologin with 'pi' user' in 'Raspberry Pi Configuration'
 in Preferences
 
-Even if it is reported 'pi' user the system will boot in your pi renamed user!
+Even if it is reported 'pi' user the system will boot in your pi renamed user (in this case mike)!
 
 that's it!
+
+if you have done everything then you can disable root (safe thing to do):
+
+sudo passwd -l root
