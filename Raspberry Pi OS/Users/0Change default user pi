@@ -2,7 +2,7 @@ first if you have not done it already set a password for root
 
 sudo passwd root
 
-then go to preferences 'Raspberry Pi Configuration' and click on 'Auto login'
+then go to preferences 'Raspberry Pi Configuration' and near to 'Auto login'
 check 'Disabled'
 
 reboot your system
