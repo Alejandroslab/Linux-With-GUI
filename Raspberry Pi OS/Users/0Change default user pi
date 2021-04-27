@@ -36,3 +36,7 @@ in Preferences
 Even if it is reported 'pi' user the system will boot in your pi renamed user (in this case mike)!
 
 that's it!
+
+if you have done everything then you can disable root (safe thing to do):
+
+sudo passwd -l root
