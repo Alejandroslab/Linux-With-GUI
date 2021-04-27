@@ -12,6 +12,10 @@ and in the password your password
 
 it will open the root desktop!
 
+
+(If it does not load properly you can anyways open a terminal with the
+shortcut ctrl + alt + t)
+
 from there open terminal and type:
 
 usermod -l <new_user> pi
