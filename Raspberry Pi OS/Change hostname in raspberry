@@ -1,5 +1,5 @@
 sudo raspi-config
-then Network Options then hostname
+then System Options then Hostname
 
 
 otherwise you can do with the GUI
