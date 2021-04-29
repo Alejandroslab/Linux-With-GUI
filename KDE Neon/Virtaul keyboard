@@ -1,0 +1,6 @@
+if you have touchscreen and want a virtual keyboard
+install onboard
+
+sudo apt install onboard
+
+however autodisplay will not work in kde (it will work only in Gnome)
