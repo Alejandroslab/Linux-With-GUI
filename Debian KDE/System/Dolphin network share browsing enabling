@@ -1,0 +1,21 @@
+In any app when you choose to open a file in the
+column on the left it will not be displayed any
+Newtork folder
+
+to enable it you just have to go to
+
+cd /etc/samba
+
+Then
+
+sudo nano smb.conf
+
+Insert in the [global] section (the very first section just read
+the file carefully) this line:
+
+client max protocol = NT1
+
+save and exit then restart smbd and nmbd
+
+sudo service smbd restart
+sudo service nmbd restart
