@@ -1,0 +1,41 @@
+If you have already performed a disk to disk Backup
+and just want to format your drive follow these steps.
+
+you know that Clonezilla has created a partition table
+with all your partitions, creating a very exact copy
+of your hd on your external hd
+
+now if you want to erase it (because for example you have
+an HD bigger than 2tb and want to gain back all your capacity)
+the easiest solution is using DISKPART in windows
+
+just open cmd as Administrator
+
+then:
+
+list disk
+
+select your external disk (be very carefull here, in the list the
+first disk is numbered as '0', the second one as '1' and so on)
+
+select disk 1
+
+
+then just type:
+
+clean
+
+this will delete all partitions
+
+now convert to a GUID partiton table disk (the only format that allows the usage of more than 2tb of capacity)
+(remmeber thta MBR that is copied with clonezilla during the 'disk to disk' backup process,
+only allows the usage of 2tb, the excessive space will remain unallocated but also unusable)
+
+type:
+
+conver gpt
+
+done!
+
+now if you go to disk management you will see just one block of unallocated space
+click on create new volume and you are done!

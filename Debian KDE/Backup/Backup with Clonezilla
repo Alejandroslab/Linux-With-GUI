@@ -1,0 +1,28 @@
+Using windows, download an ISO image of Clonezilla
+then using rufus create the live usb on a usb stick
+
+now run on your linux machine
+
+you can choose "disk to disk" (follow the official instructions)
+but REMEMBER! if your target disk (e.g. the external HD) is larger than your source disk (the one that
+you will backup)
+ you will not be able to use all your space
+as Clonezilla will create a full copy of your HD and create a partition table
+as MBR that means that
+only 2TB will be supporte (any additional space
+will remain unused and you will not be able to use in any way
+(in Windows in the Disk utility
+it will remain as unallocated space without possibilty to use it))
+
+
+Anyways ou will find all the disk as they will be mounted and you will
+be able to browse folders (but be sure that disk will be almost of the same size beacuse
+of the problem describe above)
+
+
+
+Seeing the problem of larger disk, and knowing
+that perhpahs you just want to use ALL your disk capacity
+you may want to just create a backup image:
+you have to have a NTFS formatted external HD
+then s
