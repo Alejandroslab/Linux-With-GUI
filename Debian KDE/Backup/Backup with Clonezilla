@@ -15,14 +15,27 @@ will remain unused and you will not be able to use in any way
 it will remain as unallocated space without possibilty to use it))
 
 
-Anyways ou will find all the disk as they will be mounted and you will
-be able to browse folders (but be sure that disk will be almost of the same size beacuse
-of the problem describe above)
+Anyways you will find all the disks as they will be mounted and you will
+be able to browse folders (but be sure that disk will be almost of the same size because
+of the problem describe above) (the format shown will be 'basic partition' in WIndows it will ask
+to format)
 
 
 
 Seeing the problem of larger disk, and knowing
-that perhpahs you just want to use ALL your disk capacity
+that perhaps you just want to use ALL your disk capacity
 you may want to just create a backup image:
 you have to have a NTFS formatted external HD
-then s
+then choose "disk to image"
+select the destination disk then the source one (in this order. anyways follow the instructions)
+
+This procedure will save a compressed image in multiple parts.
+If you want to access your files you will have to restore the image using again clonezilla
+no way to restore uncompressing with any other tool.
+
+In order to have a backup in one partition just create first a partition (even with Disk maangement in Windows),
+shrinking a larger partiton.
+Just create a partition of the size of your source hard disk.
+
+Then just use the 'device to device' option and select the correct partitions!
+when the process is finished you have been cloned your disk
