@@ -1,0 +1,5 @@
+all packages are usually installed on
+
+/usr/bin
+
+which is a part of the PATH
