@@ -1,0 +1,9 @@
+to perform a backup:
+
+sudo dd if=/dev/sda of=/dev/sdb
+
+Those commands created images of entire drives. You could also focus on a single partition from a drive. The next example does that and also uses bs to set the number of bytes to copy at a single time (4,096, in this case). Playing with the bs value can have an impact on the overall speed of a dd operation, although the ideal setting will depend on your hardware profile and other considerations.
+
+ dd if=/dev/sda2 of=/home/username/partition2.img bs=4096 
+
+ sudo dd if=/dev/sda5 of=/dev/sdb2/backupdd.img bs=4096 status=progress
