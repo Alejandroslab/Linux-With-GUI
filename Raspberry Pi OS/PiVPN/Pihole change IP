@@ -1,0 +1,12 @@
+in order to change ip in Pihole just access to the host
+and then run
+
+pihole -r
+
+do not choose repair but the other option
+
+then it will ask you if you want to keep the same ip of your host
+(that will be your new ip)
+click ok and done!
+
+your password will be unchanged
