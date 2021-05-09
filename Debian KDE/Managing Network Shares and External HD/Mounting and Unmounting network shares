@@ -1,0 +1,143 @@
+
+On Linux and UNIX operating systems,
+a Windows share can be mounted on a particular
+mount point in the local directory tree using the cifs option of the mount command.
+
+The Common Internet File System (CIFS) is a network file-sharing protocol. CIFS is a form of SMB.
+
+IN DEBIAN KDE the network folder can be mounted but it does it in a very strange way
+with the so-called KIO system library
+
+The problem is that with this sort of integration you cannot browse
+to your network folders even if you can have access to them
+(e.g. when you
+need to upload a file from another application with GUI)
+
+Plus, they will be weirdly stored in a sort of '.cache' folder
+
+
+Therefore to fix this problem you need to perform the
+'classic' mounting operations.
+
+In Debian first install
+
+
+    sudo apt update
+    sudo apt install cifs-utils
+
+
+then create a directory where you want to mount your network or external folder
+
+sudo mkdir /home/me/myfolder
+
+then create a file in which you will store your credential (doing that will avoid
+to keep asking every time)
+
+sudo nano /etc/myservercredentials
+
+and type:
+
+username=user
+password=password
+domain=domain
+
+where 'user' and 'password' are the credentials to access your network folder
+
+then change permission and ownership:
+
+sudo chown root: /etc/myservercredentials
+sudo chmod 600 /etc/myservercredentials
+
+finally run the command:
+
+sudo mount -t cifs -o credentials=/etc/myservercredentials //NETWORK_SERVER_HOSTNAME_OR_IP/<share_name> /home/me/myfoldername
+
+done!
+REMEMBER: you must always specify a folder inside your 'NETWORK_SERVER'
+this means that you cannot leave:
+//NETWORK_SERVER_HOSTNAME_OR_IP
+
+without specifying the '<share_name> '
+because simply it will not work
+
+By default of the mounted share is owned by root, and the permissions are set to 777.
+
+REMEMBER! the share is owned by root
+
+Anyways you should be able to read write and execute as the permission
+for all or other is set as '7'. '777' means that the owner, group and Others
+can read, write and execute
+
+Anyways can change permissions with these new options:
+
+sudo mount -t cifs -o credentials=/etc/myservercredentials,dir_mode=0755,file_mode=0755 //NETWORK_SERVER_HOSTNAME_OR_IP/<share_name> /home/me/myfoldername
+
+
+REMEMBER! after the comma you does not have to type a space as
+otherwise the command will not be recognized(basically it will not work
+for 'mount bad usage')
+
+Anyways you will not be able to edit your file has the share is owned by root
+therefore you need to change the user
+you can change it with 'uid' where 1000 represent the first non-root user created
+
+
+The default user and group ownership can be changed with the uid and gid options:
+_______________________________________________
+
+therefore this is the real line to use !
+(REMEMBER you can also FIRST specify the command in the fstab and
+then run 'sudo mount /home/me/myfoldername')
+
+sudo mount -t cifs -o credentials=/etc/myservercredentials,uid=1000,gid=1000,dir_mode=0755,file_mode=0755 //NETWORK_SERVER_HOSTNAME_OR_IP/<share_name> /home/me/myfoldername
+
+(you can check then with 'ls -n' if your user ID and group ID have been set up correctly)
+______________________________
+
+AUTOMOUNTING
+
+To make the mounting persistent (means that will be automatically mounted after a reboot)
+
+you have to edit the 'fstab' file that contains a list of entries that define where how and what filesystem will be mounted on system startup
+
+therefore open it :
+
+sudo nano /etc/fstab
+
+and add these:
+
+# <file system>                               <dir>               <type> <options>                                                         <dump>  <pass>
+//NETWORK_SERVER_HOSTNAME_OR_IP/<share_name> /home/me/myfoldername cifs  credentials=/etc/myservercredentials,file_mode=0755,dir_mode=0755 0       0
+
+save and exit than run :
+
+sudo mount /home/me/myfoldername
+
+The mount command, will read the content of the /etc/fstab and mount the share.
+
+Next time you reboot the system, the Windows share will be mounted automatically
+
+REMEMBER! we have not specified 'uid' and 'gid' as this will not work
+(it will result failed to mount because the 'Device is busy')
+
+______________________________
+
+UNMOUNT
+just run:
+
+sudo umount /home/me/myfoldername
+
+REMEMBER; It is 'umount' without the 'n'
+
+if it has been written in the 'fstab' you have to remember to delete also from there
+
+
+The umount command will fail to detach the share when it is in use. To find out which processes are accessing the windows share, use the fuser command:
+
+fuser -m MOUNT_POINT
+
+Once you find the processes, you can stop them with the kill command and unmount the share.
+
+If you still have problems unmounting the share, use the -l (--lazy) option, which allows you to unmount a busy file system as soon as it is not busy anymore.
+
+sudo umount -l MOUNT_POINT

@@ -1,0 +1,14 @@
+in Debian 10 (Buster)
+
+sudo apt install nextcloud-desktop
+
+then, as we are in Plasma environment (KDE) you can install the
+plugin for dolphin:
+
+sudo apt install dolphin-nextcloud
+
+done!
+
+Now nextcloud client will ben in the menu bar under 'Utilities'
+
+open it and connect to your server
