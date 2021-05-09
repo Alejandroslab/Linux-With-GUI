@@ -1,0 +1,26 @@
+you can change your username but sometimes it could happen that
+the process is used by the old user (by systemd or sshd if you have set up an ssh connection)
+
+to solve this within ssh connection:
+
+go to
+
+sudo nano /etc/ssh/sshd_config
+
+and add:
+
+PermitRootLogin yes
+
+then restart the ssh server
+systemctl restart sshd
+
+now exit from the current ssh session
+and connect it directly to root with
+
+ssh root@hostname_or_ip
+
+type your password (or just put 'PermitRootLogin without-password' if you have not set up a password for root)
+
+then change your user as usual
+
+DONE!
