@@ -80,9 +80,13 @@ you can change it with 'uid' where 1000 represent the first non-root user create
 
 
 The default user and group ownership can be changed with the uid and gid options:
+_______________________________________________
+
+therefore this is the real line to use !
 
 sudo mount -t cifs -o credentials=/etc/myservercredentials,uid=1000,gid=1000,dir_mode=0755,file_mode=0755 //NETWORK_SERVER_HOSTNAME_OR_IP/<share_name> /home/me/myfoldername
-therefore this is the real line to use !
+
+(you can check then with 'ls -n' if your user ID and group ID have been set up correctly)
 ______________________________
 
 AUTOMOUNTING
