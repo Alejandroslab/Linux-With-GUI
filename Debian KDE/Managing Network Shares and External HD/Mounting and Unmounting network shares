@@ -83,6 +83,8 @@ The default user and group ownership can be changed with the uid and gid options
 _______________________________________________
 
 therefore this is the real line to use !
+(REMEMBER you can also FIRST specify the command in the fstab and
+then run 'sudo mount /home/me/myfoldername')
 
 sudo mount -t cifs -o credentials=/etc/myservercredentials,uid=1000,gid=1000,dir_mode=0755,file_mode=0755 //NETWORK_SERVER_HOSTNAME_OR_IP/<share_name> /home/me/myfoldername
 
@@ -111,6 +113,9 @@ sudo mount /home/me/myfoldername
 The mount command, will read the content of the /etc/fstab and mount the share.
 
 Next time you reboot the system, the Windows share will be mounted automatically
+
+REMEMBER! we have not specified 'uid' and 'gid' as this will not work
+(it will result failed to mount because the 'Device is busy')
 ______________________________
 
 UNMOUNT
