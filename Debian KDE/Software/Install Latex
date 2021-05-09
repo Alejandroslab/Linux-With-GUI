@@ -1,0 +1,45 @@
+First you need to install tex live
+
+
+sudo apt-get install texlive-full
+
+then install:
+
+sudo apt-get install texmaker
+
+then install latexmk needed to automate the process of generating a latex document:
+
+sudo apt-get install texmaker
+
+now in Atom just download the
+'latex' package from tomasjo to compile within atom latex documents
+'pdf-view' from izuzak to enable to view pdf files in atom
+'language-latex' from area to get latex syntax highlighting in atom
+
+Done!
+
+Now make this changes:
+
+go to Atom-> preferences -> packages
+go to settings of the 'latex' package and:
+
+check 'Build on save'
+uncheck 'Open result after successful build'
+uncheck 'Open result in background'
+under 'Output directory' type 'build'
+
+in 'language-latex' package
+check 'soft wrap'
+
+If you have download BasicTeX, chances are you have to download packages that publishers use in their templates.
+The easiest way is to Google search for the missing packages, or search Comprehensive TEX Archive Network (CTAN).
+
+For example, algorithmic is one of the commonly used packages, and we might see this in the document.
+
+\usepackage{algorithmic}
+
+To install packages, open the Terminal, type:
+
+sudo tlmgr install algorithms
+
+DONE!
