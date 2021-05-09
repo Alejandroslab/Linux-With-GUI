@@ -1,0 +1,29 @@
+AUTOMOUNTING
+
+To make the mounting persistent (means that will be automatically mounted after a reboot)
+
+you have to edit the 'fstab' file that contains a list of entries
+that define where how and what filesystem will be mounted on system startup
+
+therefore open it :
+
+sudo nano /etc/fstab
+
+and add these:
+
+# <file system>                               <dir>               <type> <options>                                                                                              <dump>  <pass>
+//NETWORK_SERVER_HOSTNAME_OR_IP/<share_name> /home/me/myfoldername cifs  credentials=/etc/myservercredentials,uid=1000,gid=1000,dir_mode=0777,file_mode=0777,x-systemd.automount 0       0
+
+REMEMBER! after the commas you must not place any space
+REMEMBER! in this case we are specifing the user '1000' that is the first non-root user.
+Therefore permission could be set up as '777' (or better '775')
+CAREFUL! In Debian 10 you MUST add the option 'x-systemd.automount' otherwise it will not work in any way
+(this has been reported in the official documentation)
+
+save and exit than run :
+
+sudo mount /home/me/myfoldername
+
+The mount command, will read the content of the /etc/fstab and mount the share.
+
+Next time you reboot the system, the Windows share will be mounted automatically
