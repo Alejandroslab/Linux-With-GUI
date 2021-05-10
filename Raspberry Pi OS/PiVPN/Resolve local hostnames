@@ -11,6 +11,8 @@ then restart openvpn
 
 sudo systemctl restart openvpn
 
+
+
 THIS SEEMS TO NOT WORK IN WINDOWS as windows does not resolve local hostnames anyways
 
 or you can change your
@@ -22,3 +24,7 @@ or you can change your
 ...
 
 IPaddress hostname
+
+
+if you have connected with pihole then you need to configure 'Conditional Forwarding'
+in settings-> DNS in your pihole settings 
