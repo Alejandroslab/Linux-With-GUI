@@ -26,7 +26,18 @@ exists
 
 DONE!
 
-REMEMBER! Just use the correct slash as in Windows this is:
+you may not need to indicate the 'slash \'
+you can in fact indicate the server with:
+
+myserver.local
+
+and the folder just indicating its name:
+
+myfolder
+
+
+REMEMBER! If you use slahses just use the correct slash AS YOU WERE in Windows.
+This is:
 '\'
 and not the '/'!
 
