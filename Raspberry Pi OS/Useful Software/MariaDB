@@ -1,0 +1,21 @@
+sudo apt install mariadb-server
+
+to access:
+
+sudo mysql
+
+to setup the root account:
+
+sudo mysql_secure_installation
+
+Then you’ll need to create a new user and a database
+And finally you can configure the server in the /etc/mysql folder
+
+
+Once you are connected, you can use all the MySQL queries like these:
+
+    SHOW DATABASES;
+    USE <database>;
+    SHOW TABLES;
+    SELECT * FROM <table>;
+    UPDATE, INSERT, DELETE, …
