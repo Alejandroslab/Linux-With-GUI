@@ -1,0 +1,40 @@
+Download the installation script with this line:
+
+curl -fsSL https://get.docker.com -o get-docker.sh
+
+then run the SCRIPT
+
+sudo sh get-docker.sh
+
+
+DONE!
+
+to check the version use
+
+sudo docker version
+
+or
+
+sudo docker info
+
+
+To run the hello world just run:
+
+sudo docker run hello-world
+
+it will download the image called 'hello-world'
+
+
+to upgrade
+
+sudo apt-get upgrade
+
+to remove:
+
+sudo apt-get purge docker-ce
+
+Opposed to most other Linux distributions, Raspberry Pi is based on ARM architecture. Hence, not all Docker images will work on your Raspberry Pi.
+
+In fact, all Docker images that are not specifically designed for ARM devices will not work. Running docker-apps designed for x86/x64 and i386 architecture on your Raspberry Pi will return an error.
+
+This is the case of (Microsoft) SQL Server. This will not work as it has not be adapted for ARM architectures
