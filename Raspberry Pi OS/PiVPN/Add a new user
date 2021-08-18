@@ -5,8 +5,9 @@ follow the instructions, provide a password and DONE
 the certificate with extension .ovpn
 will be created in the folder 'ovpns'
 
-(In sftp you cannot be able to download it
-Therefore first change permissions with:
+(In sftp but also sometimes in Windows File Explorer you may not be able to download it
+or to copy the certificate
+To fix this move to the folder 'ovpns' then change permissions with:
 
 sudo chmod 777 mycertificate.ovpn
 
