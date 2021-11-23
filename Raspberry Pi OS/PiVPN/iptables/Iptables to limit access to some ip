@@ -64,39 +64,3 @@ Here, instead of '-A' we have '-I' that means INSERT
 this insert will simply INSERT (NOT replace) a rule in the table in the
 chain that you indicate (in this case FORWARD)
 and at the line number that you indicate (that in this case is the first line number that is 1)
-
-
-_________
-
-Finally if you want the rules to autostart when rebooting
-you may need iptables-persistent
-
-sudo apt-get install iptables-persistent
-
-IF IT IS ALREADY INSTALLED YOU DO NOT NEED TO DO NOTHING
-
-anyways this should usually autoinstalled along with pivpn
-therefore you may not need. Anyways launch it to be sure that you have it
-(if it is already installed you will be notified and it will not be reinstalled)
-
-
-
-_______________
-SECURITY TIPS:
-
-instead of DROP you can use also REJECT
-
-but:
-
-REJECT command sends a response message.
-And, this message will ensure the attackers about the existence of the server on the other end.
-
-It will give away information like open ports, software versions, etc which is risky.
-Incase of a DDOS attack, the server needs to respond to each request with a response.
-
-But, dropping the packet doesn’t give the user any clue regarding the connection failure.
-
-And, this is the main reason why the DROP command is more preferred.
-________
-in Windows you can scan your network to see your devices with
-angry ip
