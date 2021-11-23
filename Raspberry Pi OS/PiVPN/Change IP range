@@ -1,0 +1,6 @@
+first!
+remember that pivpn set 10.8.0.0/24 as default ip range
+
+anyways if you want to change that you have to change that here:
+
+sudo nano /etc/openvpn/server.conf

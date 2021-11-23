@@ -1,9 +1,14 @@
 pivpn add
 
 follow the instructions, provide a password and DONE
+Remember while in mac you can also copy and paste in the terminal from a password generator 
+
 
 the certificate with extension .ovpn
-will be created in the folder 'ovpns'
+will be created inside the folder 'ovpns'
+
+
+
 
 (In sftp but also sometimes in Windows File Explorer you may not be able to download it
 or to copy the certificate
