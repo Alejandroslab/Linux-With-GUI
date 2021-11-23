@@ -1,0 +1,17 @@
+
+TO Delete a rule:
+
+first list the rules with line numbers:
+
+sudo iptables -L --line-numbers
+
+if you have multiple chains defined like INPUT, OUTPUT, FORWARD etc just indicate the chain:
+in this case i want to delete a rule in the forward chain:
+
+sudo iptables -L FORWARD --line-numbers
+
+after you take the number line just run:
+
+sudo iptables -D FORWARD 9
+
+where '9' is the line number of your rule

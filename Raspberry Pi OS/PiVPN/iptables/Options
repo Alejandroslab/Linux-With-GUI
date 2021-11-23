@@ -1,0 +1,25 @@
+these are the options:
+
+-A or append allows to add a rule at the end of the chain
+
+-D or delete allows to remove the rule identified by a number
+    -D CHAINNAME number_of_rule
+
+  where number_of_rule is the number of the line
+  therefore the rule number one will be the first at top (that corresponds to the first line)
+
+-L will list the rules of the chain
+    -L CHAINNAME
+
+-F allows to empty a chain
+    -F CHAINNAME
+
+
+the option to describe the packet:
+-j is the behaviour als called 'policy' could be (DROP or ACCEPT)
+-p is the protocol
+-s is the source IP
+-d is the destination IP
+-i is the type of interface (eth0 wlan0 or tun0)
+-g the chain to go forward
+-t the table (the default one it the table filter)

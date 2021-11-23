@@ -1,3 +1,8 @@
+
+
+you must be root to add these rules. Therefore you always have to use the 'sudo'
+___________
+
 check your current iptables (this command is for IPV4)
 
 sudo iptables -L -nv
@@ -25,31 +30,7 @@ For packets that are routed via the system you have to use
 FORWARD chain!
 
 
-these are the options:
 
--A or append allows to add a rule at the end of the chain
-
--D or delete allows to remove the rule identified by a number
-    -D CHAINNAME number_of_rule
-
-  where number_of_rule is the number of the line
-  therefore the rule number one will be the first at top (that corresponds to the first line)
-
--L will list the rules of the chain
-    -L CHAINNAME
-
--F allows to empty a chain
-    -F CHAINNAME
-
-
-the option to describe the packet:
--j is the behaviour als called 'policy' could be (DROP or ACCEPT)
--p is the protocol
--s is the source IP
--d is the destination IP
--i is the type of interface (eth0 wlan0 or tun0)
--g the chain to go forward
--t the table (the default one it the table filter)
 
 e.g.
 
@@ -64,16 +45,58 @@ Therefore the command will be the same but you will need to use the FORWARD chai
 
 sudo iptables -A FORWARD -d 192.168.1.25 -j DROP
 
-you must be root to add these rules!
 
-in Windows you can scan your network to see your devices with
-angry ip
+
+Remeber that in this case with the '-A' option you will append the rule.
+This means that you will add it at the end of the table
+
+
+____________________________
+NOW REMEMEBR THAT IPTABLES READS LINE BY LINE IN ORDER!
+The order is important!
+e.g. If there is a packet that is allowed to pass but at the end of the table it is not, in this case the DROP will not work.
+It is therefore recommended to place this command at the top of the table using:
+
+sudo iptables -I FORWARD 1 -d 192.168.1.25  -j DROP
+
+Here, instead of '-A' we have '-I' that means INSERT
+
+this insert will simply INSERT (NOT replace) a rule in the table in the
+chain that you indicate (in this case FORWARD)
+and at the line number that you indicate (that in this case is the first line number that is 1)
+
+
+_________
 
 Finally if you want the rules to autostart when rebooting
 you may need iptables-persistent
 
 sudo apt-get install iptables-persistent
 
+IF IT IS ALREADY INSTALLED YOU DO NOT NEED TO DO NOTHING
+
 anyways this should usually autoinstalled along with pivpn
 therefore you may not need. Anyways launch it to be sure that you have it
 (if it is already installed you will be notified and it will not be reinstalled)
+
+
+
+_______________
+SECURITY TIPS:
+
+instead of DROP you can use also REJECT
+
+but:
+
+REJECT command sends a response message.
+And, this message will ensure the attackers about the existence of the server on the other end.
+
+It will give away information like open ports, software versions, etc which is risky.
+Incase of a DDOS attack, the server needs to respond to each request with a response.
+
+But, dropping the packet doesn’t give the user any clue regarding the connection failure.
+
+And, this is the main reason why the DROP command is more preferred.
+________
+in Windows you can scan your network to see your devices with
+angry ip
