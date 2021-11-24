@@ -22,6 +22,8 @@ Choose 'OpenVPN' as the most old protocol well tested. Wireguard is relatively n
 
 (remember to forward the port 1194 from your router to the raspberyy pi!)
 
+
+
 ________
 to install duckdns:
 
@@ -85,8 +87,8 @@ cat duck.log
 
 if 'OK' appears at the beginning of the command line then everythign went well.
 if 'KO' appears then something went wrong and you have to check your settings
-
-you can find install here:
+_________
+you can find install info here:
 
 https://www.duckdns.org/install.jsp
 ______________________________

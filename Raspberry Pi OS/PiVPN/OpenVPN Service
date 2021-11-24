@@ -1,0 +1,7 @@
+to check if openvpn is running:
+
+sudo service openvpn status
+
+to restart
+
+sudo service openvpn restart
