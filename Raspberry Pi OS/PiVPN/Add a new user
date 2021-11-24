@@ -12,3 +12,24 @@ To fix this move to the folder 'ovpns' then change permissions with:
 sudo chmod 777 mycertificate.ovpn
 
 then you can transfer it)
+
+It seems that you cannot change password. You must drop the user :(
+
+____________________________
+To download your new certificate within command line:
+
+access with 'sftp':
+
+remember! Now if you use 'pwd' (or 'ls') you will get the remote path (or list of files/folder)
+ (the path/files and folders of the server and not the local ones)
+
+if you want to use pwd in local machine (client) you will need to put the letter 'l' (of 'local')
+before any commands
+therefore:
+
+pwd will become 'lpwd', ls will become 'lls'
+
+
+to download, first cd to the right folder then:
+
+get mycertificate.ovpn
