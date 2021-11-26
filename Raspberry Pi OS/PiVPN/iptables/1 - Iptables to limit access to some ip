@@ -70,5 +70,6 @@ chain that you indicate (in this case FORWARD)
 and at the line number that you indicate (that in this case is the first line number that is 1)
 
 ________
-REMEMBER after everything to save with persistance (in this way your rules will not get erased after a reboot)
+REMEMBER after everything to save with persistance (in this way your rules will not get erased after a reboot):
+
 sudo netfilter-persistent save
