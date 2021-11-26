@@ -18,6 +18,7 @@ Chain OUTPUT (policy ACCEPT 74790 packets, 36M bytes)
  pkts bytes target     prot opt in     out     source               destination
 
 
+
 this is the default settings
 you see here 3 parts called 'chains': INPUT, FORWARD and OUTPUT
 they have all policy as 'ACCEPT'
@@ -30,6 +31,9 @@ For packets that are routed via the system you have to use
 FORWARD chain!
 
 
+or:
+
+sudo iptables -L --line-numbers
 
 
 e.g.
@@ -58,9 +62,13 @@ e.g. If there is a packet that is allowed to pass but at the end of the table it
 It is therefore recommended to place this command at the top of the table using:
 
 sudo iptables -I FORWARD 1 -d 192.168.1.25  -j DROP
-
+sudo iptables -I FORWARD 1 -d 172.20.75.52  -j DROP
 Here, instead of '-A' we have '-I' that means INSERT
 
 this insert will simply INSERT (NOT replace) a rule in the table in the
 chain that you indicate (in this case FORWARD)
 and at the line number that you indicate (that in this case is the first line number that is 1)
+
+________
+REMEMBER after everything to save with persistance (in this way your rules will not get erased after a reboot)
+sudo netfilter-persistent save
