@@ -1,8 +1,8 @@
 pivpn add
 
 follow the instructions, provide a password and DONE
-Remember while in mac you can also copy and paste in the terminal from a password generator 
-
+Remember! you can also copy and paste in the terminal from a password generator
+You will not see the password but it will paste it anyhow
 
 the certificate with extension .ovpn
 will be created inside the folder 'ovpns'
@@ -17,6 +17,8 @@ To fix this move to the folder 'ovpns' then change permissions with:
 sudo chmod 777 mycertificate.ovpn
 
 then you can transfer it)
+
+______________________________
 
 It seems that you cannot change password. You must drop the user :(
 
