@@ -16,4 +16,4 @@ IF IT IS ALREADY INSTALLED (as it should be) YOU MUST RUN:
 
 sudo netfilter-persistent save
 
-otherwise your rules will not be saved
+otherwise your rules will not be saved and at the next reboot they will be erased

@@ -51,6 +51,7 @@ are you setting the iptables commands, directed to a particular IP
 you have to use the FORWARD chain (like the router in a VPN settings)
 Therefore the command will be the same but you will need to use the FORWARD chain
 
+
 sudo iptables -A FORWARD -d 192.168.1.25 -j DROP
 
 
@@ -68,14 +69,17 @@ in this case the DROP will not work.
 It is therefore recommended to place this command at the top of the table using:
 
 sudo iptables -I FORWARD 1 -d 192.168.1.25  -j DROP
-sudo iptables -I FORWARD 1 -d 172.20.75.52  -j DROP
+sudo iptables -I FORWARD 1 -d 172.30.30.1  -j DROP
 
 Here, instead of '-A' we have '-I' that means INSERT
-
 this insert will simply INSERT (NOT replace) a rule in the table in the
 chain that you indicate (in this case FORWARD)
 and at the line number that you indicate (that in this case is the first line number that is 1)
 
+If you want to restrict access to your router on a vpn connection this will be ideal!
+
+It will allow the traffic to pass through the vpn server but will not allow to 'forward' (that is to connect)
+data to the router IP!
 ________
 REMEMBER after everything to save with persistance
 (in this way your rules will not get erased after a reboot):
