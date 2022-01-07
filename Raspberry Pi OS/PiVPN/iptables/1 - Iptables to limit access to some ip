@@ -35,6 +35,10 @@ or:
 
 sudo iptables -L --line-numbers
 
+You can also list only the FORWARD chain rules:
+
+sudo iptables -L FORWARD --line-numbers
+
 
 e.g.
 
