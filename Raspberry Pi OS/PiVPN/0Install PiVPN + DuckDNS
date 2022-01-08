@@ -87,6 +87,10 @@ cat duck.log
 
 if 'OK' appears at the beginning of the command line then everythign went well.
 if 'KO' appears then something went wrong and you have to check your settings
+
+(if you need to delete the rule just
+crontab -e
+then delete manually the rule and save the file )
 _________
 you can find install info here:
 
