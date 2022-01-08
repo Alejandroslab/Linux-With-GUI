@@ -80,6 +80,8 @@ If you want to restrict access to your router on a vpn connection this will be i
 
 It will allow the traffic to pass through the vpn server but will not allow to 'forward' (that is to connect)
 data to the router IP!
+
+With this kind of rules you will not be able to ping the devices that are restricted
 ________
 REMEMBER after everything to save with persistance
 (in this way your rules will not get erased after a reboot):
