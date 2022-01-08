@@ -27,3 +27,7 @@ placed at the top of the table it will not work.
 This means that any device that will connect to the VPN will have access
 to the VPN server (of course to have more access they will need the user password)
 Therefore, be careful with your vpn server (close doors, set a strong password and so on)
+
+________
+with these rules you will not see the devices restricted even with angry ip scanner!
+The IP will result in the list as turned off (red balls)

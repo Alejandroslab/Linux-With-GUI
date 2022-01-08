@@ -9,7 +9,9 @@ plus, you can check your iptables rules
 
 you can limit some ip's or any connection to connect to some particular ip's or devices
 
-if the rule works, angry ip will find the ip but will check it as 'dead' (red ball)!!
+if the rule works, angry ip will check the ip as 'dead' (red ball) as there is no device
+for that ip!!
+so nice!
 
 
 remember: red ball: dead or not active
