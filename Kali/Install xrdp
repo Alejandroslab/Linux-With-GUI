@@ -1,0 +1,20 @@
+Just add a "sudo" before evert command
+
+apt-get update Get an updated list of installable packages
+apt-get install xrdp Install the RDP server
+systemctl start xrdp Start the base XRDP server
+systemctl start xrdp-sesman Start the XRDP session manager
+
+
+If you encounter a blank screen the reboot the machine but to not log in.
+Only log in with remote desktop. This is due to multiple sessions. One remote and one local.
+
+To solve this “second session” problem and allow as many sessions as you need,
+
+edit /etc/xrdp/startwm.sh and add these lines BEFORE the lines that test and execute Xsession.
+
+The $HOME/.profile is not part of the solution (IS NOT NECESSARY), but is something that should be run before starting the session anyway.
+
+    unset DBUS_SESSION_BUS_ADDRESS
+    unset XDG_RUNTIME_DIR
+    . $HOME/.profile

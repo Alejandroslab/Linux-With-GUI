@@ -1,0 +1,13 @@
+
+Only log in with remote desktop. This is due to multiple sessions. One remote and one local.
+You may encounter a blank screen or the system will not log in at all closing the session immediately
+
+To solve this “second session” problem and allow as many sessions as you need,
+
+edit /etc/xrdp/startwm.sh and add these lines BEFORE the lines that test and execute Xsession.
+
+(The $HOME/.profile is not part of the solution (IS NOT NECESSARY), but is something that should be run before starting the session anyway.)
+
+    unset DBUS_SESSION_BUS_ADDRESS
+    unset XDG_RUNTIME_DIR
+    . $HOME/.profile
