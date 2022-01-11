@@ -1,0 +1,13 @@
+In Kali, open a terminal window and run the following commands:
+
+    adduser tdh Add a user for remote login. Set a password and other info.
+    usermod -aG sudo tdh Get an updated list of installable packages
+    systemctl start ssh Start the base ssh server
+
+You can use putty on windows to connect to kali over ssh
+
+You can auto start with the command
+
+systemctl enable ssh
+
+And this conclude the guide Enabling Remote Desktop and SSH access to Kali. Do not forget to reboot and to upgrade your machine.
