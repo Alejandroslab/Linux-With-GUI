@@ -1,0 +1,33 @@
+In a VPN setting you may need that a specific device that connects to the vpn
+with a particualr IP will not have access to some resources
+
+sudo iptables -I FORWARD 1 -s 10.8.0.1 -d 192.168.1.1  -j DROP
+
+In this case the device IP is 10.8.0.1 and is set as the source (-s)
+the destination is (-d) the 192.168.1.1 the policy(-j) is to DROP the traffic
+
+We must use the FORWARD chain and not the input or output one as the traffic
+will be redirected from the vpn address range 10.8.0.0/24 to another one:
+192.168.1.0/24
+
+We can also restrict the access to multiple devices easily with a comma
+(but without a space):
+
+sudo iptables -I FORWARD 1 -s 10.8.0.1 -d 192.168.1.1,192.168.1.2,192.168.1.3  -j DROP
+
+Anyways iptables will create multiple rows
+
+________
+REMEMBER!
+You can limit the access to all the devices with iptables except for the
+vpn server that is the device in which the vpn is hosted
+If you try to limit access to the VPN server with a iptables rules even if
+placed at the top of the table it will not work.
+
+This means that any device that will connect to the VPN will have access
+to the VPN server (of course to have more access they will need the user password)
+Therefore, be careful with your vpn server (close doors, set a strong password and so on)
+
+________
+with these rules you will not see the devices restricted even with angry ip scanner!
+The IP will result in the list as turned off (red balls)

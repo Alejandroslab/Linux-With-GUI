@@ -1,0 +1,13 @@
+instead of DROP you can use also REJECT
+
+but:
+
+REJECT command sends a response message.
+And, this message will ensure the attackers about the existence of the server on the other end.
+
+It will give away information like open ports, software versions, etc which is risky.
+Incase of a DDOS attack, the server needs to respond to each request with a response.
+
+But, dropping the packet doesn’t give the user any clue regarding the connection failure.
+
+And, this is the main reason why the DROP command is more preferred.

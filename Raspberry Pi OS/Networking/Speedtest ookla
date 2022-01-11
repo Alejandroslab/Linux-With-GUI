@@ -1,0 +1,7 @@
+sudo apt-get install python-pip
+
+sudo pip install speedtest-cli
+
+then run:
+
+speedtest-cli

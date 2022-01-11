@@ -13,7 +13,3 @@ for clients certificates go to:
 
 if you change the hostname of your raspberry pivpn might not work properly
 therefore you have to reinstall PiVPN (unistall it before)
-
-to uninstall:
-
-pivpn -u

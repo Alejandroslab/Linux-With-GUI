@@ -1,0 +1,19 @@
+
+Finally if you want the rules to autostart when rebooting
+you may need iptables-persistent
+
+sudo apt-get install iptables-persistent
+
+
+
+anyways this should usually autoinstalled along with pivpn
+
+therefore you may not need. Anyways launch it to be sure that you have it
+(if it is already installed you will be notified and it will not be reinstalled)
+_______________
+
+IF IT IS ALREADY INSTALLED (as it should be) YOU MUST RUN:
+
+sudo netfilter-persistent save
+
+otherwise your rules will not be saved and at the next reboot they will be erased

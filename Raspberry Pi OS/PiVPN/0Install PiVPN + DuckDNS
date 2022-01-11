@@ -22,6 +22,8 @@ Choose 'OpenVPN' as the most old protocol well tested. Wireguard is relatively n
 
 (remember to forward the port 1194 from your router to the raspberyy pi!)
 
+
+
 ________
 to install duckdns:
 
@@ -86,7 +88,11 @@ cat duck.log
 if 'OK' appears at the beginning of the command line then everythign went well.
 if 'KO' appears then something went wrong and you have to check your settings
 
-you can find install here:
+(if you need to delete the rule just
+crontab -e
+then delete manually the rule and save the file )
+_________
+you can find install info here:
 
 https://www.duckdns.org/install.jsp
 ______________________________
@@ -149,3 +155,6 @@ _______________
 to add a new user:
 
 pivpn add
+
+REMEMEBR then to give permissions to the folder and files in order to be able to access it,
+read it and download it (see 'Add a new user' file)

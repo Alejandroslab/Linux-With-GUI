@@ -1,0 +1,18 @@
+sudo ifconfig wlan0 down
+
+To completely disable the onboard WiFi from the firmware on the Pi3 / Pi4, add
+
+dtoverlay=disable-wifi
+
+in /boot/config.txt.
+
+Please be sure to use an up to date firmware, this feature was added in January 2017.
+
+sudo nano /boot/config.txt
+
+There is also an overlay for disabling onboard bluetooth : disable-bt. If you want to disable both wifi and bluetooth, you need to add these 2 lines :
+
+dtoverlay=disable-wifi
+dtoverlay=disable-bt
+
+NOTE : If you are using an old 'Pi3 only' firmware, you need to prefix the overlay name with pi3-.

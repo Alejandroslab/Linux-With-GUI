@@ -1,0 +1,11 @@
+TIP IF YOU HAVE ANOTHER PIVPN:
+You need to portforwording indicating a public port that is different than 1194 as the router
+will not allow to use a port that is already taken. (while the local port must be 1194 as this is the one in which
+pivpn installed is listening)
+
+The public port is also the 'remote' port that is indicated in the certificate itself and also in the 'Default.txt' files
+sudo nano /etc/openvpn/easy-rsa/pki/Default.txt
+
+so just change the 'remote' port in the certificate (if you have already issued one), in the 'Default.txt' file accordingly
+to which port you have indicated in your router as 'public ' port.
+Remember that the local port must remain 1194. You have also just to change the 'public' hence the 'remote' port in the pivpn files.
