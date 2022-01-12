@@ -1,0 +1,13 @@
+the default hostname is 'localhost'
+
+to change it:
+
+sudo vi /etc/hostname
+
+then here:
+change here in IPV4
+sudo vi /etc/hosts
+
+finally
+
+sudo reboot

@@ -11,3 +11,6 @@ edit /etc/xrdp/startwm.sh and add these lines BEFORE the lines that test and exe
     unset DBUS_SESSION_BUS_ADDRESS
     unset XDG_RUNTIME_DIR
     . $HOME/.profile
+
+
+This does not work in openSuse

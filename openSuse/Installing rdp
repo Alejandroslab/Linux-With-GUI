@@ -1,0 +1,9 @@
+sudo zypper install xrdp
+
+sudo systemctl enable xrdp
+
+sudo systemctl start xrdp
+
+sudo systemctl stop firewalld
+
+Since openSuse 15 the new firewall is firewalld and not SUSEfirewall2
