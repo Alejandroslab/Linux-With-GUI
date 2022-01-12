@@ -13,4 +13,4 @@ edit /etc/xrdp/startwm.sh and add these lines BEFORE the lines that test and exe
     . $HOME/.profile
 
 
-This does not work in openSuse
+This does not work in openSuse but works in Linux Mint, KDE Neon
