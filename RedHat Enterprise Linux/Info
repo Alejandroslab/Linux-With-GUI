@@ -1,1 +1,10 @@
-RHEL 
+RHEL
+You can download a copy completely free from redhat website after you enroll in the developer program
+Basically you have to register using an email and setting a password
+
+Then you will be able to download the ISO of RHEL
+
+After the installation you will not be able to download any package from terminal until you not register
+the system.
+To do that simply connect using your username and password
+REMEMBER the username is not the email is an user that you set during registration and you will not be able to change 
