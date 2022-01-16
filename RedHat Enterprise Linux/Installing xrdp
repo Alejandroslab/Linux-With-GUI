@@ -1,0 +1,20 @@
+First install the repo
+
+yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+
+then:
+
+yum install -y tigervnc-server xrdp
+
+sudo systemctl start xrdp
+
+sudo systemctl enable xrdp
+
+Then you must allow the port because firewall is active by default
+
+sudo firewall-cmd --permanent --add-port=3389/tcp
+sudo firewall-cmd --reload
+
+You can check the status of the firewall that is firewalld
+
+sudo systemctl status firewalld.service
