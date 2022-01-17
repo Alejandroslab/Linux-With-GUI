@@ -7,3 +7,8 @@ sudo systemctl start xrdp
 sudo systemctl stop firewalld
 
 Since openSuse 15 the new firewall is firewalld and not SUSEfirewall2
+
+you must run these commands to add an exception in firewalld:
+
+sudo firewall-cmd --add-port=3389/tcp --permanent
+sudo firewall-cmd --reload
