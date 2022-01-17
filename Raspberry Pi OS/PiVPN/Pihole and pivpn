@@ -7,11 +7,17 @@ your existing Pi-hole installation will be detected and
 the script will ask if you want to use it as the DNS for the VPN, so you won't need to go through all these steps.
 
     Edit the server config with sudo nano /etc/openvpn/server.conf
+
     Remove every push "dhcp-option DNS [...]" line
+
     Add this line push "dhcp-option DNS 192.168.23.211" to point clients to the PiVPN IP
+
     Save the file and exit
+
     Restart openvpn with
+
     sudo systemctl restart openvpn
+
     Run
     pihole -a -i local
     to tell Pi-hole to listen on all interfaces
