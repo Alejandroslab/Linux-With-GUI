@@ -1,0 +1,24 @@
+sudo yum install cockpit
+systemctl enable --now cockpit.socket
+
+Now add the cockpit as an exception in the firewall rule:
+sudo firewall-cmd --add-service=cockpit --permanent
+
+then reload:
+sudo firewall-cmd --reload
+
+done!
+
+Open the web console in your web browser:
+
+   Locally: https://localhost:9090
+   Remotely with the server’s hostname: https://example.com:9090
+
+   Remotely with the server’s IP address: https://192.0.2.2:9090
+
+   If you use a self-signed certificate, the browser issues a warning. Check the certificate and accept the security exception to proceed with the login.
+
+   The console loads a certificate from the /etc/cockpit/ws-certs.d directory and uses the last file with a .cert extension in alphabetical order. To avoid having to grant security exceptions, install a certificate signed by a certificate authority (CA).
+
+   In the login screen, enter your system user name and password.
+   (The system ones not the registration ones)
