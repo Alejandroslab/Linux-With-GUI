@@ -11,6 +11,7 @@ Since openSuse 15 the new firewall is firewalld and not SUSEfirewall2
 you must run these commands to add an exception in firewalld:
 
 sudo firewall-cmd --add-port=3389/tcp --permanent
+sudo firewall-cmd --permanent --zone=public --add-service=ms-wbt
 sudo firewall-cmd --reload
 
 Then open the YaST Control Center
@@ -41,4 +42,4 @@ If you have followed this instruction you will not need to disable firewalld.ser
 
 You can enable it and xrdp will work Anyways
 
-REMEMBER! Multiuser is not working at the moment. Therefore you cannot login with the same user from local and also from remote 
+REMEMBER! Multiuser is not working at the moment. Therefore you cannot login with the same user from local and also from remote
