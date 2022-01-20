@@ -12,3 +12,33 @@ you must run these commands to add an exception in firewalld:
 
 sudo firewall-cmd --add-port=3389/tcp --permanent
 sudo firewall-cmd --reload
+
+Then open the YaST Control Center
+
+Click on Network Services then 'Remote Administration (VNC)'
+Click on 'Allow Remote Administration Without Session Management'
+
+Also check the 'Enable access using a web browser'
+
+Click on next you will see that also Xorg will be installed
+
+REMEMBER! Without downloading xorg rdp will not work as rdp cannot work only with VNC on opensuse
+
+
+Finally you can change the windows manager
+
+to do that just got /etc/xrdp/startwm.sh
+
+and change the line:
+
+SESSION="gnome"
+
+to SESSION="plasma"
+
+and done
+
+If you have followed this instruction you will not need to disable firewalld.service
+
+You can enable it and xrdp will work Anyways
+
+REMEMBER! Multiuser is not working at the moment. Therefore you cannot login with the same user from local and also from remote 
