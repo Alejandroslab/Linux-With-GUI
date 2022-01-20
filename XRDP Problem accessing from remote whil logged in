@@ -15,4 +15,9 @@ edit /etc/xrdp/startwm.sh and add these lines BEFORE the lines that test and exe
 
 This does not work in openSuse but works in:
 
-Linux Mint, KDE Neon, Ubuntu 18.04 (and distros based on Ubuntu)
+Debian, Linux Mint, KDE Neon, Ubuntu 18.04 (and distros based on Ubuntu)
+
+
+REMEMEBER!
+When you set your credentials to log in remember that Debian is case sensitive for the user
+It could happen that you try to entery with a initial capital letter and the xrdp manager will not allow you to enter
