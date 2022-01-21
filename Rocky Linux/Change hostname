@@ -1,0 +1,5 @@
+just run:
+
+hostnamectl set-hostname mynewhostname
+
+to change it permanently
