@@ -1,0 +1,11 @@
+sudo dnf install xrdp -y
+
+sudo systemctl enable xrdp
+sudo systemctl start xrdp
+
+As in RHEL adjust the firewall:
+
+sudo firewall-cmd --permanent --add-port=3389/tcp
+
+Now reload:
+sudo firewall-cmd --reload

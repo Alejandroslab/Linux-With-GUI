@@ -1,0 +1,17 @@
+Just:
+sudo nano /etc/xrdp/xrdp.ini
+
+[xrdp1]
+name=sesman-vnc
+lib=libvnc.so
+username=ask
+password=ask
+ip=127.0.0.1
+port=-1
+
+
+change the port from -1 to another positive number
+Xrdp in this way will connect everytime to the same session
+
+or you can also set 'port=ask' so everytime will ask about the session
+If you want a new session you will have to type '-1'
