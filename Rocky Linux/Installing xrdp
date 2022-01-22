@@ -1,0 +1,18 @@
+sudo dnf install epel-release
+sudo dnf update
+sudo dnf install xrdp
+sudo systemctl start xrdp
+sudo systemctl enable xrdp
+systemctl status xrdp
+
+Now allow the firewall:
+
+#Add Firewall
+firewall-cmd --permanent --add-port=3389/tcp
+#Reload Firewall service
+firewall-cmd --reload
+
+Finally log out your current Rocky Linux session, so that we can access it on Windows using its Remote desktop application.
+
+This xrdp will work with xvnc
+For multiple session with the same user you can try to install xorg (i have not tested it)
