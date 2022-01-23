@@ -21,3 +21,5 @@ Debian, Linux Mint, KDE Neon, Ubuntu 18.04 (and distros based on Ubuntu)
 REMEMEBER!
 When you set your credentials to log in remember that Debian is case sensitive for the user
 It could happen that you try to entery with a initial capital letter and the xrdp manager will not allow you to enter
+Even if you have set up your user with a capital letter 'Myuser' remember that for xrdp you need
+to indicate it as 'myuser' therefore with lower case !
