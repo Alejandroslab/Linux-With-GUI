@@ -1,0 +1,15 @@
+Check first in this file nano /etc/sudoers
+
+that the line
+%wheel ALL=(ALL) ALL
+
+is uncommented
+
+then switch to root
+
+su
+
+
+usermod –aG wheel your-user
+
+su your-user
