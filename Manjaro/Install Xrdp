@@ -1,0 +1,71 @@
+successfully installed on Manjaro XFCE 4
+
+First install the last xrdp and the xorgxrdp-git (driver for xrdp)
+You will find them in the AUR repository that you can access it with 'yay'
+
+
+Therefore first install yay:
+
+sudo pacman -S yay
+
+Then install it:
+
+sudo yay -S aur/xrdp aur/xorgxrdp-git
+
+If they cannot be installed because 'a shared library is missing ' or something similar
+You need to update your system with:
+
+sudo pacman -Syyu
+
+Now during the update you can incurr in some conflict with some packages
+
+If they do not let you do the update just try to remove them being careful as if they weight more than some megabytes
+you have to find for what they are needed in order to avoid system instability
+
+to remo the packages:
+
+sudo pacman -R nameofpackage
+
+After removing them rerun the system update
+
+sudo pacman -Syyu
+
+Finally install xrdp and the xorgxrdp-git
+
+Within the terminal you can incurr in some other errors therefore I installed them from GUI
+
+Go to start and open 'Add/Remove Software'
+
+Be sure that on Preferences 'AUR' is enabled
+Then look for xrdp and the xorgxrdp-git and build them
+
+Now go to /etc/X11
+and create this file (as it will not probably exist)
+
+sudo nano /etc/X11/Xwrapper.config
+
+Inside type:
+
+allowed_users = anybody
+
+now edit this file:
+
+sudo nano .xinitrc
+
+and edit:
+Change SESSION=${1:-xfce-session} to read SESSION=${1:-xfce4-session}
+Change local dbus_args=(–sh-syntax –exit-with-session) to read local dbus_args=(–sh-syntax)
+Change exec $(get_session “$1”) to read exec $(get_session “$SESSION”)
+
+
+
+
+then run
+
+sudo systemctl enable xrdp
+sudo systemctl enable xrdp-sesman
+
+sudo systemctl start xrdp
+
+DONE!
+Reboot your system and it should work 
