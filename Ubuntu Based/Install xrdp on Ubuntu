@@ -1,0 +1,7 @@
+sudo apt-get install xrdp
+
+then add a rule with 'ufw' the firewall
+
+sudo ufw allow 3389
+
+where 3389 is the port used by default by xrdp
