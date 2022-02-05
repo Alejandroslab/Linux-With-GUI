@@ -1,0 +1,13 @@
+When you see this:
+
+Media change: please insert the disc labeled
+'Debian GNU/Linux 9.11.0 _Stretch_ - Official amd64 DVD Binary-1 20190908-18:12'
+in the drive '/media/cdrom/' and press [Enter]
+
+we comment or remove the lines in :  /etc/apt/sources.list correspondign to 'deb cdrom...'
+
+now:
+
+apt-get update
+
+done
