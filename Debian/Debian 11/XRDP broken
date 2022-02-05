@@ -1,0 +1,20 @@
+xRDP – Detected issues with Debian 11 – Oh No ! Something has gone wrong….
+
+
+cd ~/Downloads
+wget https://www.c-nergy.be/downloads/xRDP/xrdp-installer-preview-2021.zip
+unzip xrdp-installer-preview-2021.zip
+
+The problem seems to affect only Debian “Bulleyes”  with Gnome Desktop.  We have tried with KDE interface and it seems that everything works as expected.  We were able to access the remote Desktop and the kde desktop was presented accordingly.  To have xRDP working against Gnome Desktop on top of Debian 11, the quick fix we can offer you is to perform a custom installation of xRDP.
+
+Run the script with option -c
+
+./xrdp-installer-preview-2021.sh -c -l
+
+ sudo xrdp -v
+
+ If everything went fine, you should see that the xRDP package version would be set to 0.9.17 or higher
+
+ We had to look a little bit further in order to find out what it’s really causing the issue.  Based the the bug/issue reported to the team behind xrdp software (see https://github.com/neutrinolabs/xorgxrdp/issues/156),  the problem is only present when using the xorgxrdp package version 0.2.12.  Previous version of Debian (Debian 10) was using the package version 0.2.9 and we didn’t encountered the issue…Debian 11 is shipping with the problematic version (i.e. 0.2.12) and this explain why the connection is failing.
+
+The only fix proposed by xRDP team is basically to upgrade the xorgxrdp package to a more recent version which is exactly what’s happening when you are performing the custom installation….
