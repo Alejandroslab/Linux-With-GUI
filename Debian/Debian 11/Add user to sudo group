@@ -1,0 +1,12 @@
+su root
+nano /etc/sudoers
+
+ctr+w and ctrl+v (goes to the end of the file)
+
+then type:
+
+username ALL=(ALL:ALL) ALL
+
+ Replace the username with the user that you want to add to the sudo group in Debian 11 Bullseye.
+
+ save it and done
