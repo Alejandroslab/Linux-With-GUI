@@ -1,0 +1,5 @@
+If you have 2 pc that resides in different subnets but you want to connect them via rdp
+you can do that!
+just indicate the IP to the RDP client (in Linux use Remmina) and done!
+
+This will work even if the subnets cannot communicate between each other (you can see that they will not be able to ping each other)
