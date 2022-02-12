@@ -1,0 +1,20 @@
+You have to install libinput package then you can set it also in the menu 
+Just look for libinput 
+
+Then run:
+
+libinput-gestures-setup status
+
+to learn about the status
+
+Then start the program 
+
+libinput-gestures-setup start
+
+and enable it as autostart 
+
+libinput-gestures-setup autostart
+
+done!
+
+then you can edit your gestures with libinput in the menu bar 
