@@ -1,0 +1,5 @@
+sudo pacman -Syu
+
+If you have packages that you suspect are corrupt, you can force a database download with your update to take care of those issues. Even if no updates are available, pacman will verify the integrity of your currently installed packages. Add a second y to the string to make that happen.
+
+sudo pacman -Syyu
