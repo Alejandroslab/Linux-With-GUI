@@ -1,0 +1,9 @@
+The error:
+
+error: jansson: signature from "Eli Schwartz <eschwartz@archlinux.org>" is invalid
+
+Just try to update your system with 
+
+sudo pacman -Syu
+
+THen it should go work
