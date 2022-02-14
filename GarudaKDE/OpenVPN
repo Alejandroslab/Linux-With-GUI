@@ -1,0 +1,6 @@
+You do not need to install any client as the vpn client is incorporated in the Network Setting 
+Just go to the network settings and add a new OpenVPN connection
+
+You can also import ovpn files 
+When you connect it will ask for your certificate password and done 
+
