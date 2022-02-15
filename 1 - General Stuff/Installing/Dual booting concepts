@@ -1,0 +1,2 @@
+As you are dual booting from a SINGLE physical drive, it needs (must have) only one EFI System Partition (ESP).
+Therefore you must not create a new in particular if Windows has already provided one 
