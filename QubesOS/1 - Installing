@@ -1,0 +1,11 @@
+If you want the live version you need to flash the iso on a usb USING Linux
+
+sudo dd if=Qubes-RX-x86_64.iso of=/dev/sdY status=progress bs=1048576 && sync
+
+Change Qubes-RX-x86_64.iso to the filename of the version you’re installing, and change /dev/sdY to the correct target device e.g., /dev/sdc).
+
+Make sure to write to the entire device (e.g., /dev/sdc) rather than just a single partition (e.g., /dev/sdc1).
+
+To check your devices mounted and unmounted:
+
+lsblk
