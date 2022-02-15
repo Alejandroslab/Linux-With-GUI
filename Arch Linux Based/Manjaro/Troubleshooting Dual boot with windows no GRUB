@@ -20,3 +20,9 @@ grub> search.file /etc/manjaro-release  root
 grub> configfile /boot/grub/grub.cfg
 
 Now your Manajro installed versions should run!
+
+otherwise:
+
+grub> boot
+
+and it should run 
