@@ -1,0 +1,22 @@
+After the installation it can happen that Windows will not allow you to load the Manajaro.efi
+
+Anyways to load up your system 
+
+
+    boot up livecd in the right mode, uefi or bios-legacy
+    Do not boot up to live OS, but press ‘c’ at the start menu and we’ll get to the grub prompt (grub>).
+    To be sure you've started up livecd in the right mode, at grub prompt, check output of
+     
+
+grub> echo $grub_platform
+
+If output is pc , you've booted up in bios-legacy.
+If output is efi , you've booted up in uefi.
+If you're in the wrong mode, reboot livecd in the right mode.
+
+    If you are in the right mode, continue.
+
+grub> search.file /etc/manjaro-release  root
+grub> configfile /boot/grub/grub.cfg
+
+Now your Manajro installed versions should run!
