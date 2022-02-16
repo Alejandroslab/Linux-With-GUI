@@ -1,1 +1,9 @@
 upower -i $(upower -e | grep BAT) | grep --color=never -E "state|to\ full|to\ empty|percentage"
+
+or:
+
+upower -i /org/freedesktop/UPower/devices/battery_BAT0 
+
+To get minimal info pipe it with:
+
+upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "state|to\ full|percentage"
