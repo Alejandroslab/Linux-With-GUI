@@ -1,0 +1,6 @@
+sudo pacman -S vim
+
+It will install the package + dependencies
+type yes or 'y'
+
+done
