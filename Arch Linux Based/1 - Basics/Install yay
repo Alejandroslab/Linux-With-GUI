@@ -1,0 +1,4 @@
+Yay is the AUR helper
+to install (in Manjaro and Garuda)
+
+sudo pacman -S yay
