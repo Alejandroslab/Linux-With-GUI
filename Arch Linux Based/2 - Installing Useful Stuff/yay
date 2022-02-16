@@ -1,0 +1,8 @@
+sudo pacman -S yay
+
+Then avoid using yay with sudo 
+Just run
+
+yay -Sy mypackage 
+
+If you do not place the ‘y’ it will not be able to run 
