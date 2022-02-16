@@ -1,0 +1,16 @@
+Just follow the instructions
+
+Remember that the configuration files for the app launcher (the one that you can start with Super + d)
+are in:
+
+/home/myusername/.config/rofi
+
+open the file config.rasi and you will find all the appearance settings
+
+The error that I have encountered is a syntax error in the code that appears to be deprecated
+
+Just delete the line (dd in Vim) and add at the end of the file the line
+
+@theme "gorgeHousse"
+
+done
