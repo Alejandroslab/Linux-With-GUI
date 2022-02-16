@@ -7,10 +7,12 @@ are in:
 
 open the file config.rasi and you will find all the appearance settings
 
-The error that I have encountered is a syntax error in the code that appears to be deprecated
+The error that I have encountered is a syntax error in the code regarding the theme import that appears to be deprecated
 
 Just delete the line (dd in Vim) and add at the end of the file the line
 
 @theme "gorgeHousse"
+
+this will import the theme gorgeHousse.rasi that you will find in the same folder 
 
 done
