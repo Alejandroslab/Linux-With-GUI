@@ -1,2 +1,11 @@
 As you are dual booting from a SINGLE physical drive, it needs (must have) only one EFI System Partition (ESP).
-Therefore you must not create a new in particular if Windows has already provided one 
+Therefore you must not create a new in particular if Windows has already provided one (if you have Windows in your pc)
+
+
+Remember then that there must be:
+
+a root partition / that can be formatted with ext4, or btfrs
+
+and a /boot and /esp partition that is shared with Windows if you have already Windows installed and IF YOU HAVE A SINGLE PHYSICAL drive
+
+
