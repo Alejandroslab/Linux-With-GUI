@@ -1,0 +1,17 @@
+Seems that there is a problem with the installation of Manjaro on a Lenovo laptop
+
+No grub appears
+
+you can list your grubs with the command:
+
+efibootmgr
+
+when booted in live cd 
+
+there is no manjaro
+
+I have partially solved this installing on another partition another linux os like garuda 
+
+This install its GRUB correctly and will also appear in the list of 'efibootmgr'
+
+From there you can acces Manajaro choosing 'Advanced options' and then the option with 'fallback inittramfs'
