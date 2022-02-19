@@ -1,0 +1,5 @@
+killall myapp
+
+killall firefox
+
+will quit the application immediately
