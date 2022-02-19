@@ -1,0 +1,16 @@
+first check your DNS 
+
+cat /etc/resolv.conf
+
+after that check yur Gateway:
+
+route -n
+
+If you have already used (like for Pihole) your raspberry then there should be indicated an old gateway adn therefore no internet connection 
+will work
+
+(remember that 0.0.0.0 means any destination or device)
+
+you can manually change the default gateway with the command:
+
+sudo route add default gw 192.168.1.1
