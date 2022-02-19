@@ -46,5 +46,4 @@ in order to have zoom in, and:
 xdotool key Ctrl + minus
 
 to have zoom out
-
-
+(remember that 'plus' and 'minus' shoudl be both lowercase)
