@@ -37,4 +37,14 @@ _internal_ws_up
 
 you can assign it to another swipe up or down gesture
 
+Or you can choose pinch 2 fingers Out and set
+
+xdotool key Ctrl + plus
+
+in order to have zoom in, and:
+
+xdotool key Ctrl + minus
+
+to have zoom out
+
 
