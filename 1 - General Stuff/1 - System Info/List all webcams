@@ -1,0 +1,2 @@
+Run this:
+v4l2-ctl --list-device
