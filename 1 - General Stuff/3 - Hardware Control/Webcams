@@ -1,0 +1,45 @@
+sudo apt-get install fswebcam
+
+add your user to video group:
+
+sudo usermod -a -G video <username>
+
+
+you can have multiple webcams connected just list it with:
+
+v4l2-ctl --list-device
+
+
+now to user the webcam and take a pic:
+
+fswebcam image.jpg
+
+if you want to use another webcam just indicate with:
+
+
+fswebcam -d /dev/video1 myimage.jpg
+
+
+where the right path can be seen with the previous command 'v4l2-ctl --list-device'
+
+
+to user a different resolution and to remove the banner with the timestamp:
+
+
+fswebcam -d /dev/video1 -r 1280x720 --no-banner image3.jpg
+
+
+finally you can open the image from terminal with the command:
+
+xdg-open image3.jpg
+
+
+
+
+
+for more info just query with:
+
+fswebcam -h
+
+
+you can then create scripts and so on!
