@@ -1,0 +1,3 @@
+echo $XDG_SESSION_TYPE
+
+to know if you are using Xorg or Wayland
