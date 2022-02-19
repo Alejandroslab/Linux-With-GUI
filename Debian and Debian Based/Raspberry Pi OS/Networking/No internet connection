@@ -1,3 +1,8 @@
+I have encountered this problem. I had access to the LAN but no access to internet
+
+at first I thought it was a DNS problem but then I checked better and it was a gateway problem 
+
+
 first check your DNS 
 
 cat /etc/resolv.conf
