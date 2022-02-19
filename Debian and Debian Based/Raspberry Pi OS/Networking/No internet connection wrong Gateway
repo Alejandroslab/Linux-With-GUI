@@ -1,0 +1,68 @@
+I have encountered this problem. I had access to the LAN but no access to internet
+
+at first I thought it was a DNS problem but then I checked better and it was a gateway problem 
+
+
+first check your DNS 
+
+cat /etc/resolv.conf
+
+
+
+after that check yur Gateway:
+
+route -n
+
+
+You will get something like this:
+
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         192.168.1.1     0.0.0.0         UG    0      0        0 eth0
+192.168.1.0     0.0.0.0         255.255.255.0   U     0      0        0 eth0
+
+
+If you have already used (like for Pihole) your raspberry then there should be indicated an old gateway (a wrong ip) and therefore no internet connection 
+will work
+
+(remember that 0.0.0.0 means any destination or device. You can check here how the interfaces communicate
+For example, the second line stands for 'any destination in the ip range 192.168.1.0/24 has as gateway the one with ip address 0.0.0.0 that is the 
+default one'
+The default gateway is always specified in the first row 
+where can be translated as 'the default destination can be accessed via gateway 192.168.1.1'
+
+
+
+you can manually change the default gateway with the command:
+
+sudo route add default gw 192.168.1.1
+
+anyways this will only be temporary (it will last until the next reboot)
+
+therefore:
+
+To change it temporarily just edit the file:
+
+sudo vim /etc/network/interface
+
+after this lines:
+# Include files from /etc/network/interfaces.d:
+source-directory /etc/network/interfaces.d
+
+paste this:
+_______________
+
+auto lo
+auto eth0
+
+iface lo inet loopback
+iface eth0 inet dhcp
+
+allow-hotplug wlan0
+iface wlan0 inet manual
+wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf
+iface default inet dhcp
+
+___________
+
+done ! now when you reboot everything will go in place and you will have internet
+
