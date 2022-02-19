@@ -1,0 +1,10 @@
+If you have a device that supports touchscreen (convertible notebooks) 
+you will notice that there is no on screen keyboard that will automatically appear when editing text (this is available only for Gnome. No KDE Plasma)
+
+Therefore just download onboard
+
+sudo pacman -S onboard
+
+
+
+Tip: set 'Terminus' as font. That will give a robotic, modern and fresh look and feel to the virtual keyboard
