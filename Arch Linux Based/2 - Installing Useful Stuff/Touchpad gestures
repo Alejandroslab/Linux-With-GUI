@@ -1,0 +1,40 @@
+Just install  libinput-gestures
+
+you will also need xdotool
+
+
+Then you can have a GUI in order to set up your gestures installing 'gestures' (or you can set the gestures with the config file)
+
+You can then open the app called 'Gestures' and set your gestures 
+
+To Show all windows with a gesture with a swipe up with 4 fingers (like in MacOS) and to set more gestures
+have a look in the Shortcuts section in System Settings (in particular under System Services>KWin)
+
+then with 'xdotool' you will be able to recall that shortcut assignin it to a gesture, indicating it as a command
+
+Therefore for the 'Show all windows' with a swipe up with 4 fingers :
+
+select swipe up, 4 fingers then in the command space enter this:
+
+xdotool key Ctrl+F10
+
+as Ctrl+F10 is the shortcut assigne to Show all Windows in KWin section in Settings
+
+Done!
+
+Now just wait while the profile reloads (you will see a litlle hand that will bounce for some seconds)
+And then done!
+
+
+
+
+
+you can also set different other gestures !
+
+the command for change desktop is:
+ 
+_internal_ws_up
+
+you can assign it to another swipe up or down gesture
+
+
