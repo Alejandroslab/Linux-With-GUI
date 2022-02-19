@@ -1,0 +1,34 @@
+First check that your hardware is recognized properly (otherwise further research is needed)
+
+lsubs
+
+then in Manjaro KDE Plasma, as told by documentation:
+
+"The package xf86-input-wacom will be automatically installed when installing the kcm-wacomtablet from community repository."
+
+
+Therefore just install this:
+
+sudo pacman -S kcm-wacomtablet 
+
+All the necessary dependencies will be installed
+
+done. reboot your system!
+
+
+This will add Tablet Settings interface/configuration in the System Settings + the needed background services for KDE Plasma Framework. 
+
+
+Last step!
+go to the settings under System Settings>Hardware>Input Devices>Graphic Tablet 
+
+and uncheck under 'Touch' tab the option 'Enable Gestures'
+
+This because you will not be able to use touchscreen with your fngers as well as the stylus by default. 
+(This is true if you have a device that has touchscreen as well as an incorporated stylus)
+
+
+
+Anyways these configurations are stored in : ~/.config/tabletprofilesrc
+You can change it from there too
+
