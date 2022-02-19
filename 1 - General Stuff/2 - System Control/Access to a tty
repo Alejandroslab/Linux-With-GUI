@@ -1,1 +1,13 @@
-access to 
+access to a tty (terminal subsystem) in any momento just pressing:
+
+ctrl + alt + f2
+
+to go back to your DE just press
+
+ctrl+alt+f1 or try another f like f3,f4,f5
+
+Usually is also f7
+
+
+This is useful when the system crashes
+It will give you access to a terminal that will not be anymore virtual (like the ones you meet inside your GUI system)
