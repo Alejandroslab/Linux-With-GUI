@@ -1,0 +1,7 @@
+You can install via command line
+
+sudo pacman -S mypackage
+
+or you can install via GUI 'Add or Remove software'
+
+With the latter you will be asked to choose for dependcies (with commnad line dependecies will be installed by default)
