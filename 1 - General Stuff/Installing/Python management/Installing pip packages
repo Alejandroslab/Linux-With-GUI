@@ -1,0 +1,3 @@
+when installing packages remember to use 'sudo'
+
+if you do not do that the package will be installed only for the local user !
