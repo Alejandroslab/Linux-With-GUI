@@ -1,0 +1,16 @@
+Krunner works as Alfred in Mac 
+You can set shortuct to run searches on the internet 
+
+For startpage you will need where \{@} stands for the term that you are looking for
+
+https://www.startpage.com/do/dsearch?query=\{@}
+
+
+Save and then just press alt+f2 to recall Krunner type your shortcut that you have must previously inserted
+
+like if it is 'startpage' then you will have to perform your query with:
+
+startpage: this is my search on internet!
+
+
+done!
