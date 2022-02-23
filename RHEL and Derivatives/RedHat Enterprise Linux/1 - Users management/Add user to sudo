@@ -1,0 +1,18 @@
+Just switch to root
+
+su root
+
+and then add the existing user to 'wheel' group (in Debian Ubuntu is the 'sudo' group)
+
+usermod -aG wheel myuser
+
+to check if it has been added just run
+
+
+id myuser
+
+If it appears '10 wheel'
+
+you are done
+
+just log out and log in again and here you have it
