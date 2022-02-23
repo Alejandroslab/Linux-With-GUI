@@ -1,0 +1,2 @@
+When installing if you want that your user will be an administrator you need to check 'Set as administrator'
+otherwise it will not be added in the sudoers file
