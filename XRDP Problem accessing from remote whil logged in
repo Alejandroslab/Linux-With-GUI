@@ -8,8 +8,8 @@ edit /etc/xrdp/startwm.sh and add these lines BEFORE the lines that test and exe
 
 (The $HOME/.profile is not part of the solution (IS NOT NECESSARY), but is something that should be run before starting the session anyway.)
 
-    unset DBUS_SESSION_BUS_ADDRESS
-    unset XDG_RUNTIME_DIR
+unset DBUS_SESSION_BUS_ADDRESS
+unset XDG_RUNTIME_DIR
     . $HOME/.profile
 
 
