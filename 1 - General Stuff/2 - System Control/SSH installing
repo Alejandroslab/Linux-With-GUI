@@ -1,0 +1,181 @@
+Firs install
+REMEMBER! In Debian you have to install 'openssh-server' as it is not installed by default
+
+These commands are also valid for Linux Mint
+
+sudo apt-get update
+
+sudo apt-get install openssh-server
+
+
+In Debian it is usually only necesary only this last command and everything will work out!
+------
+
+
+then edit with nano or other text editor the config file
+
+sudo nano /etc/ssh/ssh_config
+
+Insert these lines at the end:
+____________________
+Port 22
+MaxAuthTries
+
+SendEnv LANG LC_*
+HashKnownHost yes
+GSSAPAuthentication yes
+_________________________
+
+(without the line at the beginning and at the end)
+
+If the lines are already there but start with # you should just delete the # symbol.
+
+Save and close nano (or other)
+
+________
+
+To check the status
+
+sudo service ssh status
+
+If the service is not running:
+
+ sudo service ssh start
+
+and you can stop with:
+
+ sudo service ssh stop
+
+Then you are done.
+
+REMEMBER! To autostart on boot the service use this syntax.
+
+sudo systemctl enable ssh
+
+Use this instead of 'sudo service ssh start'.
+Because this seems to work only once,
+
+REMEMBER! In Debian root is the only user at first. If you want to login as root
+you should add the line 'PermitRootLogin yes' to the ssh config file.
+
+_________________________________________
+In windows there are 2 ways to connect via ssh.
+
+with PowerShell or with Putty a free and open source program.
+PowerShell is pretty good but Putty has far more configuration options.
+Anyways if you need just to connect quickly you can use PowerShell
+Look at my PowerSheel repo on how to add SSH capabilities in Windows (it is an hidden option that you have to enable)
+
+
+
+The other way is to download Putty and connect to the server with hostname or IP address
+hostname, hostname -I
+
+(To copy lines in putty just highlight them. To paste lines in Putty just click right in the terminal windows).
+
+At the first starting of Putty, a security alert will appear indicating then
+'key fingerprint' in md5 format. Keep note of this fingerprint.
+
+Click 'No' the first time then login in the server (Putty will ask to save in the cache)
+
+type:
+
+ssh-keygen -E md5 -l -f /etc/ssh/ssh_host_ed25519_key.pub
+
+now compare the two fingerprint. if they are the same you can safely save the Connection
+to the Putty's cache)
+__________________________________-
+
+
+
+In Mac and Linux (whichever distro) just open Terminal, check if openssh is installed typing
+
+ssh
+
+then just:
+
+ssh username@IPserverOrHostname
+
+REMEMBER thta the IPserverOrHostname is NOT case sensitive
+
+it will then ask for your password and then you will connect to the server.
+
+_________________________
+
+For the fingerprint check, in mac it will be printed the ECDSA key in SHA256
+
+therfore just type in your remote machine:
+
+ssh-keygen -l -f /etc/ssh/ssh_host_ecdsa_key.pub
+
+ECDSA it's a public key available in the folder /etc/ssh (but this will not be the same as
+the one obtained with the command)
+
+REMEMBER! that you can always check any public key (those with extension .pub)
+that are available in the folder going to:
+
+cd /etc/ssh
+
+ls -l
+
+you will then use the command (for SHA256)
+
+ssh-keygen -l -f
+
+or the command
+
+ssh-keygen -E md5 -l -f
+
+for md5
+
+
+next you can quickly check differences with 'diff' command
+
+first copy and paste the output from the remote machine
+
+nano remotemachine_finger.txt
+
+then do the same for the fingerprint displayed in Mac:
+
+nano mac_finger.txt
+
+
+then:
+
+diff remotemachine_finger.txt mac_finger.txt
+
+
+if it outputs nothing, then you are done! no differences between fingerprints.
+
+You can safely add to cache the connection.
+
+______________________________________________
+
+if you have a specific port to connect (look at the case of LXC containers)
+the syntax will be:
+
+ssh username@IPserverOrHostname -p numberofport
+
+where numberofport is the number where ssh should look
+it could be like:
+
+ssh username@IPserverOrHostname -p 1099
+
+REMEMBER! it is not necessary to add the suffix like
+'.local' to the name of your server
+and remmember that is not case sensitive
+
+
+____________________
+configuration files:
+
+ssh_config is the config file for the ssh client
+if you want to ssh to another remote host machine, you use a SSH client.
+
+
+sshd_config is the config file for the daemon
+
+If someone wants to connect to your host machine via SSH,
+their SSH client settings (port number, version etc)
+must match your sshd_config
+settings in order to communicate with you,
