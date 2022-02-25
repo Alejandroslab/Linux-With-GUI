@@ -1,0 +1,5 @@
+Just gain access with SSH
+
+ssh myuser@host
+
+plug in the -v verbose option to see what is happening and for troubleshooting
