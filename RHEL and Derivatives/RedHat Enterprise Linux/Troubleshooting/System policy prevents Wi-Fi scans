@@ -1,0 +1,35 @@
+When in XRDP this message appears constantly "System policy prevents Wi-Fi scans"
+particularly when you open the Settings app
+
+You will not be able to get rid of it even entering the password correctly multiple times
+
+The only solution is to reboot via ssh (rememberr to always set the connection via ssh as well as xrdp )
+as if you kill the xrdp service (sudo systemctl restart xrdp) you will not be able to relogin again..
+
+
+To overcome this connect to your server via ssh and then:
+
+change to root:
+ sudo su
+
+move to this folder:
+
+cd /etc/polkit-1/localauthority/50-local.d
+
+and edit this file (or create it if there is none)
+
+vi 51-allow-wifi-scan.pkla
+
+
+add this content to that file (the file may be empty):
+
+[Network Manager all Users]
+Identity=unix-user:*
+Action=org.freedesktop.NetworkManager.settings.modify.system;org.freedesktop.NetworkManager.wifi.scan
+ResultAny=no
+ResultInactive=no
+ResultActive=yes
+
+
+save and exit
+now reboot ! or relogin and the message will not appear anymore
