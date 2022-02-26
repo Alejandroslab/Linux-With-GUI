@@ -1,0 +1,7 @@
+Just run:
+
+yay -S ipscan
+
+this will automatically download dependencies (that for angry ip is jdk library)
+
+finally just look for 'angry ip scanner'
