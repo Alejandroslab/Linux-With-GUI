@@ -1,0 +1,19 @@
+df -h 
+
+and 
+
+df -h --total 
+
+to get the total of the current partition
+
+Rememember that this command will show only mounted partitions that are partitions like your current partition in which the os lives and
+any other device (maybe external) that has been mounted
+
+If you have run dual boot this will not show you other partition (like Windows partition)
+
+
+use 
+lsblk
+
+to list all the partitions of your disk (mounted and unmounted) 
+You can see that your os lives where root is indicate (the symbol '/')
