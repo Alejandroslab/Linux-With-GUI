@@ -3,3 +3,27 @@ Just download the installer then:
 bash AnacondaInstaller.sh
 
 follow the instructions and done
+
+
+If you want the GUI yuu need to install these dependencies
+
+sudo pacman -Sy libxau libxi libxss libxtst libxcursor libxcomposite libxdamage libxfixes libxrandr libxrender mesa-libgl  alsa-lib libglvnd
+
+
+The installer prompts “Do you wish the installer to initialize Anaconda3 by running conda init?” We recommend “yes”.
+
+Now:
+
+Close and open your terminal window for the installation to take effect, or you can enter the command source ~/.bashrc.
+
+To control whether or not each shell session has the base environment activated or not, run conda config --set auto_activate_base False or True. To run conda from anywhere without having the base environment activated by default, use conda config --set auto_activate_base False. This only works if you have run conda init first.
+
+
+Now to verify the installation just run:
+
+conda list 
+
+to list all the packages
+
+Enter the command python. This command runs the Python shell. If Anaconda is installed and working, the version information it displays when it starts up will include “Anaconda”. To exit the Python shell, enter the command quit().
+Open Anaconda Navigator with the command anaconda-navigator. If Anaconda is installed properly, Anaconda Navigator will open.
