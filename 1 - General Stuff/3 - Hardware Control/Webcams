@@ -33,6 +33,13 @@ for full hd (1080p):
 fswebcam -d /dev/video1 -r 1920x1080 --no-banner image_fullhd.jpg
 
 
+usually then webcams reach this odd resolution:
+
+ fswebcam -d /dev/video1 -r 2304x1536 --no-banner imagetopres.jpg
+ 
+ 
+ 
+
 finally you can open the image from terminal with the command:
 
 xdg-open image3.jpg
