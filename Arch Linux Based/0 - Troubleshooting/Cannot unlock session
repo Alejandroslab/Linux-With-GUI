@@ -1,0 +1,21 @@
+If you cannot unlock your session
+just access to tty2 and then
+
+sudo loginctl unlock-session 2
+
+or to unlock all the session:
+sudo loginctl unlock-sessions
+
+the exit with ctrl+d
+and go back to tty1
+
+with
+
+ctrl + alt +f1
+
+
+You can also list all the sessions with:
+
+loginctl list-sessions 
+
+REMEMBER with the italian keyboard you may need to use: 'altgr + -' to get the dash symbol '-'

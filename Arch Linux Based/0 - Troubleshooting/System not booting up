@@ -1,0 +1,12 @@
+When your system just hangs and does not load desktop manager
+
+try to change to tty2 or tty3 (ctrl+alt+f2 or f3)
+
+then login with user and password
+finally check your logs
+
+usually they are in /var/log/Xorg.0.log
+
+another way to troubleshooting is to run
+
+sudo dsemg

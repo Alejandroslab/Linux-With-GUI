@@ -1,0 +1,20 @@
+if the server (that is xorg or wayland) terminate the process with an error you need to check the error
+
+If you see that some library is missing something like:
+
+'version GLIBC_2.34' not found and then all other errors that depend on a specific package/library then try to run a full system upgrade:
+
+sudo pacman -Syu
+
+the last 'u' stands for upgrade
+
+type yes and wait
+
+after rebooting desktop server may run
+
+if it does not you need more troubleshooting investingating the error
+You need the logs for xorg or wayland and maybe the logs for the kernel
+
+usually it is just a matter of uprgrading your system as some dependencies may not been upgraded yet..
+
+good luck 
