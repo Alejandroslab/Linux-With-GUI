@@ -1,0 +1,5 @@
+You can verify just with:
+
+sha256sum myfile
+
+Then compare the hash that will be printed with the official hash of the provider (in its website usually)
