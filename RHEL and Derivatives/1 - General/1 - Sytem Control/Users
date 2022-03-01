@@ -3,3 +3,11 @@ create a new user:
 su 
 
 useradd mynewuser
+
+to set a password for my new user:
+
+passwd mynewuser
+
+Finally to add to sudo group:
+
+usermod -aG wheel mynewuser 
