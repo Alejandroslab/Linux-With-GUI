@@ -1,0 +1,5 @@
+create a new user:
+
+su 
+
+useradd mynewuser
