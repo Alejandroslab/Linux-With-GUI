@@ -1,1 +1,26 @@
 sudo yum install cockpit
+
+enable then with:
+
+sudo systemctl enable --now cockpit.socket
+
+finally if you have firewalld enabled. check it with:
+
+sudo systemctl status firewalld 
+
+then you have to add an exception 
+
+sudo firewall-cmd --permanent --zone=public --add-service=cockpit
+sudo firewall-cmd --reload
+
+if you do not have a firewall enabled and you are on a VPS then you have to check if your provider does not provide another firewall by default
+
+Usually the provider will have deployed a firewall that you can see it in the VPS control panel
+
+from there you have to open port 9090 (the default one for cockpit) or another one you choose to run it (but then you have to change your config files)
+
+and then done! you can access your cockpit 
+
+just remember that it will take some time to load (and you may need to click on 'Advanced' after a security warning in your browser=
+Then it is probably better that you close the port after you have finished your work
+
