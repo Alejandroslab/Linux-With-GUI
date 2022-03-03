@@ -1,0 +1,7 @@
+If it disconnect every time just addd this line to the file .env on the folder
+
+
+sudo vim .env
+
+
+ENABLE_XMPP_WEBSOCKET=0
