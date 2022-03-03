@@ -57,6 +57,13 @@ Now if the error is 'cannot allocate memory inside container docker'
 It means that your server needs more RAM or CPU (but mainly more RAM). If you have a VPS you need to upgrade your VPS
  
  
+ Fianlly if you cannot open your meeting when clicking the blue button then you need to run:
+ 
+ ./gen-password.sh
+ 
+ script that you will find in the docker jitsi meet folder that you have previously cloned
+ This script will provide some necessary keys to the Jitsi Mett meeting
+ 
 
  
  With this we can check all the running containers
