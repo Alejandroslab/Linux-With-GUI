@@ -51,8 +51,13 @@ add first the group 'docker':
  sudo groupadd docker
  
  sudo usermod -aG docker $USER
+
+
+Now if the error is 'cannot allocate memory inside container docker'
+It means that your server needs more RAM or CPU (but mainly more RAM). If you have a VPS you need to upgrade your VPS
  
- This will download the Jitsi Meet
+ 
+
  
  With this we can check all the running containers
  
@@ -69,5 +74,9 @@ sudo firewall-cmd --zone=public --add-port=4443/tcp --permanent
 sudo firewall-cmd --zone=public --add-port=10000/udp --permanent
 
 sudo firewall-cmd --reload
+
+If you are on a local network and you want to get access from the external world then you need to port forwarding these ports on your router 
+(if you have a cascading routers set up you need a double port forwarding one for the main router that connects to the second one that finally connects to your server 
+in which jitsi meet is installed)
 
 Now, open your web browser and access the Jitsi Meet using the URL https://your-server-ip:8443/
