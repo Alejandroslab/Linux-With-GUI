@@ -5,3 +5,9 @@ sudo vim .env
 
 
 ENABLE_XMPP_WEBSOCKET=0
+
+
+other stuff that I have changed:
+
+#PUBLIC_URL=https://meet.example.com:8443 | how it was
+PUBLIC_URL=https://192.168.0.10:8443 #| how it became (Your machine IP here)
