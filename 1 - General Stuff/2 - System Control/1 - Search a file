@@ -1,0 +1,7 @@
+Just use
+
+find -name ‘test*’
+
+To look for files that begins with test 
+
+This means that also ‘testing’ or ‘tests’ will be retrieved 
