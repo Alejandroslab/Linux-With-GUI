@@ -1,1 +1,89 @@
-I have installed this on RHEl 8.5
+I have installed this on RHEL 8.5
+
+On RHEL you cannot install it without docker. Therefore you need to install docker and docker-compose before:
+
+sudo dnf update -y
+sudo dnf install yum-utils curl git -y
+
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+
+update the package:
+
+sudo dnf makecache
+
+Install Docker with this command:
+
+sudo dnf install docker-ce --nobest
+
+sudo systemctl start docker
+sudo systemctl enable docker
+
+Now install docker-compose:
+
+sudo curl -L https://github.com/docker/compose/releases/download/1.25.4/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+
+sudo chmod +x /usr/local/bin/docker-compose
+
+Done!
+Check the version: 
+
+docker-compose --version
+
+
+Now install Jitsi Meet
+
+git clone https://github.com/jitsi/docker-jitsi-meet
+
+copy the sample environment:
+cd docker-jitsi-meet
+cp env.example .env
+
+create required directories for Jitsi meet:
+mkdir -p ~/.jitsi-meet-cfg/{web/letsencrypt,transcripts,prosody,jicofo,jvb}
+
+Now build the Jitsi Meet Docker image
+
+docker-compose up -d
+
+Now if this command will not work you have to add your user to docker group:
+
+add first the group 'docker':
+ sudo groupadd docker
+ 
+ sudo usermod -aG docker $USER
+
+
+Now if the error is 'cannot allocate memory inside container docker'
+It means that your server needs more RAM or CPU (but mainly more RAM). If you have a VPS you need to upgrade your VPS
+ 
+ 
+ Fianlly if you cannot open your meeting when clicking the blue button then you need to run:
+ 
+ ./gen-password.sh
+ 
+ script that you will find in the docker jitsi meet folder that you have previously cloned
+ This script will provide some necessary keys to the Jitsi Mett meeting
+ 
+
+ 
+ With this we can check all the running containers
+ 
+ docker ps
+ 
+ At this point, Jitsi meet container is started and running on port 8443.
+ 
+ Finally check your firewall and enable the following ports:
+ 
+sudo firewall-cmd --zone=public --add-port=80/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=443/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=8443/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=4443/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=10000/udp --permanent
+
+sudo firewall-cmd --reload
+
+If you are on a local network and you want to get access from the external world then you need to port forwarding these ports on your router 
+(if you have a cascading routers set up you need a double port forwarding one for the main router that connects to the second one that finally connects to your server 
+in which jitsi meet is installed)
+
+Now, open your web browser and access the Jitsi Meet using the URL https://your-server-ip:8443/

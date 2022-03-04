@@ -1,0 +1,5 @@
+If your server is on your local network you need to be able to access to your routeer 
+if you do not have a public IP you need a DDNS provider like duckdns 
+
+After that you can connect to your router to the port 8443 in order to access to Jitsi Meet 
+Remember that first you need to port forwarding to your server
