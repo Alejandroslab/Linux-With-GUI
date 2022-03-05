@@ -1,0 +1,12 @@
+In Debian based distro go to:
+
+etc/default/console-setup
+
+change to something like this:
+
+CHARMAP="UTF-8"
+CODESET="Lat7"
+FONTFACE="Terminus"
+FONTSIZE="28x14"
+
+reboot to take effect 
