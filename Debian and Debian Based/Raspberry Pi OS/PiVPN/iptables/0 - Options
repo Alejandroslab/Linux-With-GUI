@@ -1,5 +1,7 @@
 these are the options:
 
+-I Will insert at the top a new rule
+
 -A or append allows to add a rule at the end of the chain
 
 -D or delete allows to remove the rule identified by a number
@@ -18,8 +20,8 @@ these are the options:
 the option to describe the packet:
 -j is the behaviour als called 'policy' could be (DROP or ACCEPT)
 -p is the protocol
--s is the source IP
--d is the destination IP
+-s is the source IP (may be also a range)
+-d is the destination IP (may be also a range)
 -i is the type of interface (eth0 wlan0 or tun0)
 -g the chain to go forward
 -t the table (the default one it the table filter)
