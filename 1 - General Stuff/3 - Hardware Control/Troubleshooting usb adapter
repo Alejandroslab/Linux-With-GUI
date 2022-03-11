@@ -1,0 +1,28 @@
+Sometimes not all connected USB devices are listed with:
+
+lsusb
+
+this may be a problem related with firmware and not of drivers.
+This because lsusb loads all firware info of any device
+
+If your device (say like a wifi adapter) is not listed we can try to check kernel logs with:
+
+sudo dmesg
+
+This will list all the events and the errors related 
+
+If there is some firmware related issue like a .lib file missing then you will need to download it from anywhere on the internet and finally place under
+
+/lib/firmware/folder_of_firmware_missing
+
+where the firmware missing is the folder that if does not exist you will need to create
+
+under this folder you will have to place your .lib file!
+
+Then unplug and plug again your usb device (and maybe reboot) and done
+
+after that with
+
+lsusb
+
+you will find your device listed !
