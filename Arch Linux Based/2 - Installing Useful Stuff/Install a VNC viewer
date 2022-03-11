@@ -1,3 +1,19 @@
-This is useful to remotely connect to apple machines
+This is useful to remotely connect to apple machines as rdp don't work with Macs
 
 In manjaro or arch derivatives look for tiger vnc viewer (not server just the viewer as we only need to connect to remote machines)
+
+Anyways it may not work correctly therefore you may want to install just Remmina and then the vnc plugin
+
+in Arch the vnc package is called: ' libvncserver '
+
+install it:
+
+sudo pacman -S  libvncserver
+
+then 
+
+killall remmina
+
+as if you only close remmina something related may still be running
+
+finally reopen remmina e you will have in the dropdown menu also the VNC option!
