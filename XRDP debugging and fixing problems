@@ -1,0 +1,118 @@
+you can watch live debugging with
+
+sudo systemctl status xrdp
+
+or just print this:
+
+ sudo cat /var/log/xrdp.log
+
+
+you can also look here for session manager (sesman):
+
+/var/log/xrdp-sesman.log
+
+
+Anyways even if you have the logs sometimes you cannot know what is the problem as the log is not too much verbose about it
+
+Therefore you may want to guess..
+
+First check that you do not have any firewall in place, liike ufw, firewalld, iptables and other..
+You can check it listing the active services with:
+
+systemctl
+
+If you do not have any it is better that you proceed to uninstall xrdp and all the dipendencies
+
+sudo apt-get purge xrdp
+
+and reinstall it 
+
+Reboot. if the error persist then check all these steps:
+
+
+
+
+
+FILES TO INSPECT FOR ERRORS:
+
+The files in which to look are different 
+1) the first one:
+
+/etc/xrdp/xrpd.ini
+
+
+Here everyhting must be left as default 
+(in particular in 'session types' where xorg must be left with port=-1 as well as vnc, vnc any and neutrino that must not be commented and left as default)
+
+
+2) The same applies for 
+
+/etc/xrdp/sesman.ini
+
+
+here everything must not be touched. Port 3350 is correct. Do not touch it
+
+
+3) Then in /etc/X11/Xwrapper.config 
+leave as default, with the line:
+
+allowed_users=console
+
+DO NOT CHANGE as suggested on the internet (the workaround to change it in 'anybody' may be working for older versions of xrdp or xorgxrdp but as of the version
+xrdp 0.9.9-1 is not working )
+(remember to check the package version run the command:   apt list xrdp)
+
+
+
+4) in /etc/xrdp/startwm.sh
+
+after the long if statement regarding the default locale settings place this:
+
+----
+
+if test -r /etc/profile; then
+        . /etc/profile
+fi
+
+
+unset DBUS_SESSION_BUS_ADDRESS
+unset XDG_RUNTIME_DIR
+test -x /etc/X11/Xsession && exec /etc/X11/Xsession
+exec /bin/sh /etc/X11/Xsession
+
+----
+
+the first part is an if statement that recalls the profile file
+you will see the same statement at the very beginning of the same 'startwm.sh' file but that is perfectly ok. 
+it is not redundant even if it seems so, therefore do not delete it!
+
+Finally, as commented in other files, before the 2 final lines 'test' and then 'exec' place the 2 'unset' lines as indicated.
+
+save and exit
+
+
+
+
+5) then in /etc/sddm.conf 
+(only for KDE as for other desktops you may want to inspect gdm, etc..)
+
+leave 
+
+[Autologin]
+Relogin=true
+
+and do not change to 'false' as the relogin seems do not cause any problem for this xrdp package..
+
+
+
+6) FINALLY if in your home there are some hidden files called .xsession and something related like 
+
+.xession, .xsession-errors, .xession-save 
+
+(inside these files you will see a line invoking plasma-session and other regarding logs of this invoke stuff)
+
+DELETE THEM!! and reboot the machine !
+
+after deleting them (and IF ALL OTHER FILES HAVE BEEN EVENTUALLY CORRECTED AS STATED) xrdp must go back working again!  
+
+(at least this was the way as I solved the problem..)
