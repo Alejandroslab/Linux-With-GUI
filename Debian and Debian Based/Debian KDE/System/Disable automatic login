@@ -1,0 +1,5 @@
+sudo nano /etc/gdm3/daemon.conf
+
+if you have not gdm3 then you should inspect /etc folder and look for sddm or sddm.conf
+
+change there the Autologin or Relogin option
