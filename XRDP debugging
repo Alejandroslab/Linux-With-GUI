@@ -5,3 +5,8 @@ sudo systemctl status xrdp
 or just print this:
 
  sudo cat /var/log/xrdp.log
+
+
+you can also look here for session manager (sesman):
+
+/var/log/xrdp-sesman.log
