@@ -1,1 +1,7 @@
 echo $XDG_CURRENT_DESKTOP
+
+if you are not on GUI but via ssh you will not get any result with that command
+
+you may want to check if you have 'gdm' or 'sddm' or other in the services list with:
+
+systemctl list-units --type=service --state=active
