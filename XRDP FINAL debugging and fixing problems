@@ -26,11 +26,30 @@ You can check it listing the active services with:
 
 systemctl
 
-If you do not have any it is better that you proceed to uninstall xrdp and all the dipendencies
+You may see the 'networking' service as 'failed'
+
+to fix this:
+
+sudo mv /etc/network/interfaces.d/setup ~
+
+just move the files to the home folder.
+Then reboot the machine
+
+AFTER THIS PASSAGE XRDP MAY GO BACK AT WORK. But I am not quite sure about it. If it still does not work proceed with the other steps:
+
+
+
+
+If you do not any firewall and no errors in services, it is better that you proceed to uninstall xrdp and all the dipendencies and then get a fresh install of it
 
 sudo apt-get purge xrdp
 
 and reinstall it 
+
+sudo apt-get install xrdp 
+
+(in debian you may want to add the xrdp user to ssl group)
+
 
 Reboot. if the error persist then check all these steps:
 
@@ -41,6 +60,8 @@ Reboot. if the error persist then check all these steps:
 FILES TO INSPECT FOR ERRORS:
 
 The files in which to look are different 
+
+
 1) the first one:
 
 /etc/xrdp/xrpd.ini
@@ -120,4 +141,7 @@ DELETE THEM!! and reboot the machine !
 
 after deleting them (and IF ALL OTHER FILES HAVE BEEN EVENTUALLY CORRECTED AS STATED) xrdp must go back working again!  
 
-(at least this was the way as I solved the problem..)
+
+I suspect that these files were the culprit of xrdp not working... not quite sure though. 
+Took me 4 hours...
+
