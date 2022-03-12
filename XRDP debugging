@@ -1,0 +1,7 @@
+you can watch live debugging with
+
+sudo systemctl status xrdp
+
+or just print this:
+
+ sudo cat /var/log/xrdp.log
