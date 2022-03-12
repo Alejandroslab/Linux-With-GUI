@@ -1,0 +1,9 @@
+apt list
+
+to get all the packages
+
+apt list thepackage
+
+where 'thepackage' is the name of the package that you are looking for
+
+it will retrieve the version
