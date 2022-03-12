@@ -1,0 +1,19 @@
+simply:
+sudo apt-get install xrdp
+
+now this will automatically run
+
+check the status with
+
+sudo systemctl status xrdp
+
+now xrdp uses a particular key file which is readable only by users that
+are member of the ssl-cert group
+therefore we will add the xrdp user to the group:
+
+sudo adduser xrdp ssl-cert
+
+DONE!
+
+of course as in ubuntu you will need to LOGOUT
+to your current session in order to log with xrdp
