@@ -1,4 +1,4 @@
-you can watch live debugging with
+You can watch live debugging with
 
 sudo systemctl status xrdp
 
@@ -14,7 +14,12 @@ you can also look here for session manager (sesman):
 
 Anyways even if you have the logs sometimes you cannot know what is the problem as the log is not too much verbose about it
 
+
 Therefore you may want to guess..
+
+I HAD THIS PROBLEM WITH DEBIAN 10. 
+Here I describe the steps that I followed in order to get to a solution..
+
 
 First check that you do not have any firewall in place, liike ufw, firewalld, iptables and other..
 You can check it listing the active services with:
