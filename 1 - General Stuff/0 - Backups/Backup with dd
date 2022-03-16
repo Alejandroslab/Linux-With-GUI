@@ -1,0 +1,8 @@
+sudo dd if=/dev/sda1 of=/dev/sdb2 status=progress
+
+this will create an exact copy of your disk in another disk (like an external disk)
+
+
+to check the right partitions:
+
+lsblk
