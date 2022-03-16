@@ -1,0 +1,36 @@
+2 things to do: partition alignment and superblock recovering
+
+sudo parted /dev/sdb
+
+type p to print the partition table
+
+if you see some partition are not aligned, that is that the numbers are not listed sequentially like 1,2,3....
+
+then run:
+
+align-check opt partition-number
+
+where "partition-number" is the number of the partitoin that you need to align
+
+then type q to quit
+
+if still doe not solve the problem then we have to recover the superblock, that is the very first block of the partition:
+(in this case these instructions are just for ext partitions)
+
+sudo parted -l
+
+sudo mke2fs -n /dev/sdb5
+
+change sdb5 according to your damaged partition
+
+It will tell you that the partition contains an ext4 file system, press y to continue. Don’t worry the -n option tells mke2fs not to create a file system.
+
+At the bottom, you can see the location of backup superblocks. Next, restore the superblock from the first backup copy.
+
+
+sudo e2fsck -b 32768 /dev/sdb6
+
+now with e2fsck you will scan all the ext partition. Once recovered the superblock it may be necessary to check the file system 
+e2fsck command will ask you if you want to correct some errors
+
+Type yes and done. after a while everything will finish!
