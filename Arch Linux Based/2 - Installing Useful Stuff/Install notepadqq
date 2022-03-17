@@ -1,0 +1,3 @@
+Notepad++ alternative in arch is:
+
+sudo pacman -S notepadqq
