@@ -10,7 +10,9 @@ sudo pacman -S yay
 
 Then install it:
 
-sudo yay -S aur/xrdp aur/xorgxrdp-git
+yay -S aur/xrdp aur/xorgxrdp-git
+
+(avoid using sudo with yay)
 
 If they cannot be installed because 'a shared library is missing ' or something similar
 You need to update your system with:
@@ -22,7 +24,7 @@ Now during the update you can incurr in some conflict with some packages
 If they do not let you do the update just try to remove them being careful as if they weight more than some megabytes
 you have to find for what they are needed in order to avoid system instability
 
-to remo the packages:
+to remove the packages:
 
 sudo pacman -R nameofpackage
 
@@ -32,7 +34,9 @@ sudo pacman -Syyu
 
 Finally install xrdp and the xorgxrdp-git
 
-Within the terminal you can incurr in some other errors therefore I installed them from GUI
+
+
+With the terminal you can incurr in some other errors therefore I installed them from GUI
 
 Go to start and open 'Add/Remove Software'
 
