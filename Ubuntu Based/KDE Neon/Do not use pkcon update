@@ -1,0 +1,13 @@
+You may need to upgrade your system and it may suggest:
+
+pkcon update
+
+just try it with:
+
+sudo pkcon update
+
+it may freeze
+
+If it freezes just run>
+
+sudo apt full-upgrade

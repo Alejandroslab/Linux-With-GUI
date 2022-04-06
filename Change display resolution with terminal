@@ -1,0 +1,12 @@
+first run:
+
+xrandr
+
+it will list all the available display and resolutions (even virtual displays)
+
+to set a resolution just type:
+
+xrandr --output Virtual-1 --mode 1440x900
+
+where Virtual-1 is the name of your display (the one that you choose from the list outputed by the 'xrandr' command)
+
