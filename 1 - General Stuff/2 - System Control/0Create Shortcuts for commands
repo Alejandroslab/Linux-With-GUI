@@ -1,0 +1,22 @@
+you know that for updates you have to run every time:
+
+sudo apt-get update
+
+there are shortcust that in linux are called 'alias' that allow to save time
+
+we can create one with this syntax:
+
+alias update='sudo apt-get update'
+
+after run the term 'update' the system will load the correspondent:
+
+sudo apt-get update
+
+
+to store permanently aliases just open .bashrc (that is hidden) in home folder
+and add them
+
+(plus when opening .bashrc you will see some commented example of aliases)
+
+
+alias will work even in Mac
