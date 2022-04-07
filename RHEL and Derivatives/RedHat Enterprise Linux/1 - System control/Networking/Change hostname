@@ -1,0 +1,5 @@
+sudo hostnamectl set-hostname mynewhostname
+
+you can also change it with:
+
+sudo systctl kernel.hostname=mynewhostname
