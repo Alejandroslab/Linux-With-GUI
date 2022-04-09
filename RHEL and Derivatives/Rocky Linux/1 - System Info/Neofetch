@@ -1,0 +1,10 @@
+$ sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+$ sudo dnf install epel-release
+
+$ sudo dnf install neofetch
+
+to edit the ascii code to reflect the rockylinux code:
+
+$ curl -s https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch | grep -o Rocky
+
+$ sudo curl -s https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch -o /usr/bin/neofetch
