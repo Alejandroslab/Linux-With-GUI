@@ -1,1 +1,7 @@
+just run:
+
+hostnamectl
+
+or:
+
 cat /etc/redhat-release
