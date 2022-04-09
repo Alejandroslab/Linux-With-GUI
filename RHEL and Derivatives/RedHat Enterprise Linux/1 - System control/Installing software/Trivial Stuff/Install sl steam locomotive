@@ -1,0 +1,15 @@
+sudo yum install sl
+
+
+
+It also supports the following options:
+
+    -a : An accident seems to happen. You’ll feel pity for people who cry for help.
+    -l : shows little one.
+    -F : It flies.
+    -e : Allow interrupt by Ctrl+C.
+
+
+to stop use: ctrl+z
+
+to pause: ctrl +s 
