@@ -1,0 +1,7 @@
+sudo vim .bashrc
+
+append at the end of the file:
+
+neofetch
+
+write and quit
