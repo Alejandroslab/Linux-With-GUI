@@ -1,1 +1,5 @@
- sudo yum install ansible
+sudo yum install ansible
+
+you can also install autocomplete with
+
+sudo yum install python3-argcomplete
