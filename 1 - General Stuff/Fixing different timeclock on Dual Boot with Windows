@@ -1,0 +1,5 @@
+Just set: 
+
+timedatectl set-local-rtc 1
+
+In this way you will the time synced
