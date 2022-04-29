@@ -1,0 +1,4 @@
+sudo apt-get update
+sudo apt-get install ssh
+
+and then go live with user: 'ubuntu'
