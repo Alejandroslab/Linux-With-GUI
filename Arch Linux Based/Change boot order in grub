@@ -1,0 +1,26 @@
+You may want to install in dual boot arch with Windows
+
+You may want also to change the boot order and set Windows as default.
+
+You can inspect /etc/grub/grub.cfg
+
+in any 'menu entry' part you will see the different OS's (if you have more than 2) 
+
+if windows appears as second entry the you will known that its position will be the '2'
+
+Thereofre open:
+
+vim /etc/default/grub
+
+in GRUB_DEFAULT set '2'
+
+GRUB_DEFAULT=2
+
+save and exit then run:
+
+sudo update-grub
+
+finally test it rebooting your pc
+
+
+If the posiiton is not '2' then inspect further the file grub.cfg
