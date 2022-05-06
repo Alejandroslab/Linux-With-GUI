@@ -1,0 +1,22 @@
+2 ways to do this:
+FIRST WAY:
+
+sudo yum install mysql
+
+SECOND WAY (this has not worked for me):
+
+First add the YUM repository
+this is for RHEL 8:
+wget https://repo.mysql.com/mysql80-community-release-el8-4.noarch.rpm
+
+then:
+
+sudo yum localinstall mysql80-community-release-el8-4.noarch.rpm
+
+to check the yum repo:
+
+yum repolist enabled | grep "mysql.*-community.*"
+
+INSTALL mysql
+
+sudo yum install mysql-community-server
