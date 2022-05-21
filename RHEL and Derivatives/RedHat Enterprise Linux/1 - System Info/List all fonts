@@ -1,0 +1,5 @@
+fc-list : file
+
+if you want to just retrieve the names without the path:
+
+ fc-list : file | cut -d '/' -f 6 
