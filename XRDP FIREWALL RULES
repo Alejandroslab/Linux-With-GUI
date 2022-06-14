@@ -1,0 +1,5 @@
+for ufw just run 
+
+sudo ufw allow 3389
+
+which will allow the 3389 port 
