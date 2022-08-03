@@ -1,9 +1,18 @@
 Just add a "sudo" before evert command
 
-apt-get update Get an updated list of installable packages
-apt-get install xrdp Install the RDP server
-systemctl start xrdp Start the base XRDP server
-systemctl start xrdp-sesman Start the XRDP session manager
+apt-get update
+
+Get an updated list of installable packages
+apt-get install xrdp
+
+Install the RDP server
+
+systemctl start xrdp
+
+Start the base XRDP server
+
+systemctl start xrdp-sesman
+Start the XRDP session manager
 
 
 If you encounter a blank screen the reboot the machine but to not log in.
