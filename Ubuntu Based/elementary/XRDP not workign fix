@@ -1,0 +1,8 @@
+elementary uses a desktop environment called 'Pantheon'
+as this may not work you can use xfce with the following steps:
+
+
+sudo apt-get update
+sudo apt-get install xfce4
+echo xfce4-session >~/.xsession
+sudo service xrdp restart
