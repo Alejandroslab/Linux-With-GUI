@@ -1,7 +1,7 @@
 Firs install
 REMEMBER! In Debian you have to install 'openssh-server' as it is not installed by default
 
-These commands are also valid for Linux Mint
+These commands are also valid for Linux Mint and ElementaryOS
 
 sudo apt-get update
 
