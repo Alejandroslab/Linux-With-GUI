@@ -1,0 +1,3 @@
+VIM does not come preinstalled
+
+sudo apt-get install vim -y
