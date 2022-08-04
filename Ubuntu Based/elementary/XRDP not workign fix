@@ -1,4 +1,7 @@
+elementaryOS does not support xrdp. (It can support vnc..)
+
 elementary uses a desktop environment called 'Pantheon'
+
 as this may not work you can use xfce with the following steps:
 
 
