@@ -1,0 +1,7 @@
+sudo zypper install docker
+
+sudo systemctl enable docker
+
+sudo systemctl start docker
+
+if you do not start it it will stay inactive
