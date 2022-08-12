@@ -1,0 +1,124 @@
+successfully installed on Manjaro XFCE 4 and KDE Plasma 5.24
+
+
+First install the last xrdp and the xorgxrdp-git (driver for xrdp)
+You will find them in the AUR repository that you can access it with 'yay'
+
+
+IT IS SAFER TO INSTALL VIA GUI. GO SOME LINES BELOW HERE:
+
+Therefore first install yay:
+
+sudo pacman -S yay
+
+Then install it:
+
+yay -S aur/xrdp aur/xorgxrdp-git
+
+(avoid using sudo with yay)
+
+If they cannot be installed because 'a shared library is missing ' or something similar
+You need to update your system with:
+
+sudo pacman -Syyu
+
+Now during the update you can incurr in some conflict with some packages
+
+If they do not let you do the update just try to remove them being careful as if they weight more than some megabytes
+you have to find for what they are needed in order to avoid system instability
+
+to remove the packages:
+
+sudo pacman -R nameofpackage
+
+After removing them rerun the system update
+
+sudo pacman -Syyu
+
+Finally install xrdp and the xorgxrdp-git
+
+
+INSTALLING WITH GUI 
+
+With the terminal you can incurr in some other errors therefore I installed them from GUI
+
+Go to start and open 'Add/Remove Software'
+
+Be sure that on Preferences 'AUR' is enabled
+Then look for xrdp and the xorgxrdp-git and build them!
+
+_____________________________________________
+Now for KDE you can run (REMEMBER! FOR XFCE I HAVE RUN THESE COMMANDS AT THE END WHILE FOR KDE I HAVE RUN AS IN THE ORDER POSTED HERE):
+(skip this passage for XFCE)
+
+sudo systemctl enable xrdp.service
+sudo systemctl enable xrdp-sesman.service
+________________________________________________
+
+Now run this:
+
+sudo echo “allowed_users=anybody” >> /etc/X11/Xwrapper.config
+(basically this will append the text between double quotes inside the file in the path indicated)
+
+If this last commands will return error it's because the file probably still does not exist
+
+Therefore go to /etc/X11
+and create this file (as it will not probably exist)
+
+sudo vim /etc/X11/Xwrapper.config
+
+Inside type:
+
+allowed_users = anybody
+
+
+Ok done. last step:
+
+edit this file:
+
+sudo vim .xinitrc
+
+and edit:
+______________________
+for XFCE: 
+
+SESSION=${1:-xfce-session} 
+to read SESSION=${1:-xfce4-session}
+Change 
+
+local dbus_args=(–sh-syntax –exit-with-session) 
+
+to read local dbus_args=(–sh-syntax)
+Change 
+
+exec $(get_session “$1”)
+to read exec $(get_session “$SESSION”)
+
+
+__________
+for KDE:
+comment this line (should be the last line of the file)
+
+exec $(get_session “$1”)
+
+and add at the end of the file:
+
+exec dbus-launch --sh-syntax startplasma-x11
+
+done!
+
+
+reboot your system and for kde you have done!
+
+
+
+
+Conversely for XFCE now run these:
+
+sudo systemctl enable xrdp
+sudo systemctl enable xrdp-sesman
+
+sudo systemctl start xrdp
+
+DONE!
+Reboot your system and it should work 

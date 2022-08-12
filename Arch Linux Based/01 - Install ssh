@@ -1,0 +1,12 @@
+sudo pacman -S openssh
+
+sudo systemctl status sshd.service
+
+sudo systemctl enable sshd.service
+
+ sudo systemctl start sshd.service
+
+ Done!
+ config file is as usual here:
+
+ /etc/ssh/sshd_config

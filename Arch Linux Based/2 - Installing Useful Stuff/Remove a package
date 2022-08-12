@@ -1,0 +1,8 @@
+sudo pacman -R filezilla
+
+you can remove all dependecies with:
+
+ sudo pacman -Rcns filezilla
+
+
+careful when removing!
