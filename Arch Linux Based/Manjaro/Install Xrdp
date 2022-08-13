@@ -52,14 +52,13 @@ _____________________________________________
 Now for KDE you can run (REMEMBER! FOR XFCE I HAVE RUN THESE COMMANDS AT THE END WHILE FOR KDE I HAVE RUN AS IN THE ORDER POSTED HERE):
 (skip this passage for XFCE)
 
-sudo systemctl enable xrdp.service
-sudo systemctl enable xrdp-sesman.service
+sudo systemctl enable xrdp.service ; sudo systemctl enable xrdp-sesman.service
 
 you can now try :
 
 sudo systemctl start xrdp
 
-if it does not work just follow the next instructions 
+if it does not work just follow the next instructions
 ________________________________________________
 
 Now run this:

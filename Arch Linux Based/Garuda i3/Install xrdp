@@ -1,0 +1,34 @@
+xrdp works with i3!
+
+first update your OS
+
+sudo pacman -Syu
+
+or just:
+
+garuda-update
+
+for garuda (scripts that update the system )
+
+then install yay if you do not have it:
+
+sudo pacman -S yay
+
+Then install xrdp. You will need xrdp and xorgxrdp-git
+
+
+yay -S aur/xrdp aur/xorgxrdp-git
+
+
+If yay asks for which version just choose the n. 1 "xorg" and not the n. 4 "xorg-git"
+
+finally run it:
+
+sudo systemctl enable xrdp.service ; sudo systemctl enable xrdp-sesman.service
+
+you can now try :
+
+sudo systemctl start xrdp
+
+
+it should work !
