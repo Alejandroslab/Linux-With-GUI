@@ -1,0 +1,6 @@
+just run:
+
+garuda-update
+
+
+do not use sudo pacman -Syu

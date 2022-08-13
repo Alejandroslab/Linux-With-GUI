@@ -4,12 +4,11 @@ successfully installed on Manjaro XFCE 4 and KDE Plasma 5.24
 First install the last xrdp and the xorgxrdp-git (driver for xrdp)
 You will find them in the AUR repository that you can access it with 'yay'
 
-
-IT IS SAFER TO INSTALL VIA GUI. GO SOME LINES BELOW HERE:
-
 Therefore first install yay:
 
 sudo pacman -S yay
+
+
 
 Then install it:
 
@@ -37,8 +36,11 @@ sudo pacman -Syyu
 
 Finally install xrdp and the xorgxrdp-git
 
+If pacman asks which version choose 'xrdp' (press 1) and not 'xrdp-git'
 
-INSTALLING WITH GUI 
+
+
+INSTALLING WITH GUI
 
 With the terminal you can incurr in some other errors therefore I installed them from GUI
 
@@ -80,16 +82,16 @@ sudo vim .xinitrc
 
 and edit:
 ______________________
-for XFCE: 
+for XFCE:
 
-SESSION=${1:-xfce-session} 
+SESSION=${1:-xfce-session}
 to read SESSION=${1:-xfce4-session}
-Change 
+Change
 
-local dbus_args=(–sh-syntax –exit-with-session) 
+local dbus_args=(–sh-syntax –exit-with-session)
 
 to read local dbus_args=(–sh-syntax)
-Change 
+Change
 
 exec $(get_session “$1”)
 to read exec $(get_session “$SESSION”)
@@ -121,4 +123,4 @@ sudo systemctl enable xrdp-sesman
 sudo systemctl start xrdp
 
 DONE!
-Reboot your system and it should work 
+Reboot your system and it should work
