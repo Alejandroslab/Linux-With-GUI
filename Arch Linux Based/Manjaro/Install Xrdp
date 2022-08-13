@@ -37,8 +37,8 @@ sudo pacman -Syyu
 
 Finally install xrdp and the xorgxrdp-git
 
-
-INSTALLING WITH GUI 
+_________________________
+INSTALLING WITH GUI
 
 With the terminal you can incurr in some other errors therefore I installed them from GUI
 
@@ -48,11 +48,18 @@ Be sure that on Preferences 'AUR' is enabled
 Then look for xrdp and the xorgxrdp-git and build them!
 
 _____________________________________________
+
 Now for KDE you can run (REMEMBER! FOR XFCE I HAVE RUN THESE COMMANDS AT THE END WHILE FOR KDE I HAVE RUN AS IN THE ORDER POSTED HERE):
 (skip this passage for XFCE)
 
 sudo systemctl enable xrdp.service
 sudo systemctl enable xrdp-sesman.service
+
+you can now try :
+
+sudo systemctl start xrdp
+
+if it does not work just follow the next instructions 
 ________________________________________________
 
 Now run this:
@@ -80,16 +87,16 @@ sudo vim .xinitrc
 
 and edit:
 ______________________
-for XFCE: 
+for XFCE:
 
-SESSION=${1:-xfce-session} 
+SESSION=${1:-xfce-session}
 to read SESSION=${1:-xfce4-session}
-Change 
+Change
 
-local dbus_args=(–sh-syntax –exit-with-session) 
+local dbus_args=(–sh-syntax –exit-with-session)
 
 to read local dbus_args=(–sh-syntax)
-Change 
+Change
 
 exec $(get_session “$1”)
 to read exec $(get_session “$SESSION”)
@@ -110,7 +117,7 @@ done!
 
 reboot your system and for kde you have done!
 
-
+_________________________
 
 
 Conversely for XFCE now run these:
@@ -121,4 +128,4 @@ sudo systemctl enable xrdp-sesman
 sudo systemctl start xrdp
 
 DONE!
-Reboot your system and it should work 
+Reboot your system and it should work
