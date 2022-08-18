@@ -1,3 +1,5 @@
+These steps are valid also for Oracle Linux 
+
 sudo dnf install cockpit
 
 sudo systemctl enable --now cockpit.socket
