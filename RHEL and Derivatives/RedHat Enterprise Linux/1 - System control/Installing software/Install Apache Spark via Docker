@@ -1,0 +1,17 @@
+the fastes way to get spark working on rhel is via docker 
+
+to install it just run:
+
+docker pull apache/spark-py
+
+if you do not have docker RHEL will automatically ask you to download it
+
+finally to run it:
+
+docker run -it apache/spark-py /opt/spark/bin/pyspark
+
+wait some seconds and finally you will get the Spark welcome logo
+
+FInally if you run the following command, you should have as result 1,000,000,000:
+
+>>> spark.range(1000 * 1000 * 1000).count()
