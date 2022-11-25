@@ -1,3 +1,6 @@
 After download it launch
 
 sudo dpkg -i package.deb
+
+
+deb is not supported on manjaro 
