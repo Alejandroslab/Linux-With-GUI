@@ -1,0 +1,8 @@
+If you want the audio output to be played on the machine you are using to connect to the remote one then select
+'Local' under settings Audio Output
+
+if you want the audio to be outputted on the machine that you are connecting to (that is your remote machine) then choose 'Remote'
+
+If your remote machine is under Windows 11 and audio output does not work in Windows 11 you must restart your remote machine
+
+No issues encountered with Windows 10 
