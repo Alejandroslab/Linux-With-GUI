@@ -7,3 +7,17 @@ Just try to update your system with
 sudo pacman -Syu
 
 THen it should go work
+
+or just reset the keyring:
+
+If you're getting an error similar to "Can’t update: signature from *** is marginal trust" or "invalid or corrupted package" you probably just need to update your package signing keys: 
+
+sudo pacman -Sy archlinux-keyring chaotic-keyring 
+
+sudo pacman -Syu
+
+you will be asked to use the command 'garuda-update' instead of 'sudo pacman -Syu'
+
+press y 
+
+done
