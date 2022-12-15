@@ -1,0 +1,21 @@
+first check with:
+
+sudo systemctl status mariadb
+
+You can alternatively use 
+
+sudo systemctl status mysql
+
+sudo rpm --import https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+sudo zypper --gpg-auto-import-keys refresh
+sudo zypper addrepo --gpgcheck --refresh https://yum.mariadb.org/10.5/opensuse/15/x86_64 mariadb
+
+finally:
+
+sudo zypper install MariaDB-server MariaDB-client
+
+sudo systemctl enable --now mariadb
+
+To Install the most common packages, execute the following command:
+
+sudo zypper install galera MariaDB-shared MariaDB-backup MariaDB-common

@@ -1,0 +1,31 @@
+How to Fix “Authentication is required to create a color profile/managed device”
+
+Ubuntu (also Kali) uses a software component called Polkit, which is an application authorization framework that captures actions performed by a user to check if the user is authorized to perform certain actions.
+
+When you connect to Ubuntu remotely using RDP / Windows Remote Desktop, you will see the above errors because the Polkit Policy file cannot be accessed without superuser authentication.
+
+
+
+The safest fix to get rid of these popups is to create a new configuration file in 
+
+/etc/polkit-1/localauthority/50-local.d/45-allow-colord.pkla.
+
+sudo nano /etc/polkit-1/localauthority/50-local.d/45-allow-colord.pkla
+
+Paste in the following:
+
+
+[Allow Colord all Users]
+Identity=unix-user:*
+Action=org.freedesktop.color-manager.create-device;org.freedesktop.color-manager.create-profile;org.freedesktop.color-manager.delete-device;org.freedesktop.color-manager.delete-profile;org.freedesktop.color-manager.modify-device;org.freedesktop.color-manager.modify-profile
+ResultAny=no
+ResultInactive=no
+ResultActive=yes
+
+
+
+Save and exit (press CTRL + X, press Y and then press ENTER)
+
+This tells Polkit to continue without requiring the authentication prompt over RDP.
+
+Now reboot Ubuntu and try logging in again over RDP / Windows Remote Desktop and the popups should be gone.

@@ -1,0 +1,17 @@
+First make a backup of your network configuration
+
+sudo cp /etc/network/interface /etc/network/interface.backup
+
+then change it
+
+sudo vim /etc/network/interface
+
+delete all the content except the line 'source-directory...'
+
+then:
+
+sudo systemctl enable dhcpcd
+
+sudo systemctl disable networking
+
+sudo reboot

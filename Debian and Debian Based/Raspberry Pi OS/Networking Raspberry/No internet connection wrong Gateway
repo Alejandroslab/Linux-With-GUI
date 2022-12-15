@@ -30,6 +30,23 @@ default one'
 The default gateway is always specified in the first row 
 where can be translated as 'the default destination can be accessed via gateway 192.168.1.1'
 
+It should always be something like:
+
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         192.168.1.1     0.0.0.0         UG    0      0        0 eth0
+192.168.1.0     0.0.0.0         255.255.255.0   U     0      0        0 eth0
+
+
+
+otherwise you will not have internet
+
+when you change something also control the file /etc/resolv.conf and change there the name server accordingly
+(in this case will be 192.168.1.0 )
+
+I have noticed that if you have more than one step you will get some trouble...
+
+
+....
 
 
 you can manually change the default gateway with the command:
