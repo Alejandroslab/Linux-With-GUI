@@ -8,7 +8,7 @@ When you connect to Ubuntu remotely using RDP / Windows Remote Desktop, you will
 
 The safest fix to get rid of these popups is to create a new configuration file in 
 
-/etc/polkit-1/localauthority/50-local.d/45-allow-colord.pkla.
+/etc/polkit-1/localauthority/50-local.d/45-allow-colord.pkla
 
 sudo nano /etc/polkit-1/localauthority/50-local.d/45-allow-colord.pkla
 

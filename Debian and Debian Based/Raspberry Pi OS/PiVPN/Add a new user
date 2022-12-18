@@ -1,6 +1,8 @@
 pivpn add
 
 follow the instructions, provide a password and DONE
+
+You can set the username as an email just to have an easy way to remember the user
 Remember! you can also copy and paste in the terminal from a password generator
 You will not see the password but it will paste it anyhow
 
@@ -9,14 +11,14 @@ will be created inside the folder 'ovpns'
 
 
 
-
-(In sftp but also sometimes in Windows File Explorer you may not be able to download it
+______
+In sftp but also sometimes in Windows File Explorer you may not be able to download it
 or to copy the certificate
 To fix this move to the folder 'ovpns' then change permissions with:
 
 sudo chmod 777 mycertificate.ovpn
 
-then you can transfer it)
+then you can transfer it
 
 ______________________________
 
