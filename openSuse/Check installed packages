@@ -1,0 +1,6 @@
+sudo zypper search -i 
+
+
+if we want to search a particular package:
+
+sudo zypper search -i mypackage

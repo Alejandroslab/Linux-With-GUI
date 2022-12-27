@@ -1,0 +1,14 @@
+add a new user
+
+sudo adduser newuser2
+
+remember you can also use an user with a dot inside like: 'mark.spencer' but you cannot use '@' symbol 
+(in some systems you cannot use even the dot)
+
+by default the newuser is not in the sudoers group that means does not have any priviliges 
+it is just a normal user 
+
+
+In Fedora the password for the user will not be asked immediately you must set it with:
+
+sudo passwd newuser2
