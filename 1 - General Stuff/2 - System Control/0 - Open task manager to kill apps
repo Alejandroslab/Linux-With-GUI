@@ -1,0 +1,15 @@
+just look for the app System Monitor
+
+from there you can close any app
+
+you can also use the command 
+
+killall firefox 
+
+to kill any instance of firefox
+
+or 
+
+pkill [process ID]
+
+check the process id with 'top'
