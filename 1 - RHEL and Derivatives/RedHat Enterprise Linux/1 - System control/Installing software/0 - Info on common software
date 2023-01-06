@@ -1,0 +1,48 @@
+RHEL is not intended for desktop users 
+
+however someone may want to use some common software
+
+at the moment (january 2023) RHEL supports snap store and this is the only way to install other software (like spotify but also some other stuff)
+
+anyways remember that a lot of package like guake, hollywood will not work 
+
+
+
+
+first add the epel repo (in rhel 8):
+
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+sudo dnf upgrade
+
+then add the optional and extra repos 
+
+
+sudo subscription-manager repos --enable "rhel-*-optional-rpms" --enable "rhel-*-extras-rpms"
+sudo yum update
+
+
+
+finally install snap:
+
+sudo yum install snapd
+
+
+enable it as a service:
+
+sudo systemctl enable --now snapd.socket
+
+
+
+To enable classic snap support, enter the following to create a symbolic link between /var/lib/snapd/snap and /snap:
+
+sudo ln -s /var/lib/snapd/snap /snap
+
+Either log out and back in again or restart your system to ensure snap’s paths are updated correctly.
+
+
+sudo ln -s /var/lib/snapd/snap /snap
+
+
+
+
+done!

@@ -1,0 +1,16 @@
+sudo yum install java-1.8.0-openjdk-devel
+
+for jdk 8 
+
+or
+
+sudo yum install java-11-openjdk-devel
+
+for jdk 11
+
+
+remember! to work correctyl you must install just one java version if you have installed jdk 8 and then jdk11 you must remove one of them (angry ip will not work with jdk8)
+
+to remove jdk 8 for instance that:
+
+sudo yum remove java-1.8.0-openjdk-devel

@@ -1,0 +1,5 @@
+just move to the directoy in which the package is located then run
+
+sudo rpm -i mypackage.rpm
+
+where -i stands for install

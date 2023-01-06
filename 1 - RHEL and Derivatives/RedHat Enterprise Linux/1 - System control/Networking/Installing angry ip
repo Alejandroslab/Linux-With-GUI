@@ -1,0 +1,11 @@
+Just donwload from the officiale website the .rpm image 
+
+then install jdk 11
+
+sudo yum install java-11-openjdk-devel
+
+finally install it with:
+
+sudo rpm -i myangryippackage.rpm
+
+done !

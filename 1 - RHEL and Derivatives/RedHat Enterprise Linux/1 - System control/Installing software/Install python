@@ -1,1 +1,5 @@
-yum install python3
+sudo yum install python3 -y
+
+you can also search
+
+sudo yum search python3

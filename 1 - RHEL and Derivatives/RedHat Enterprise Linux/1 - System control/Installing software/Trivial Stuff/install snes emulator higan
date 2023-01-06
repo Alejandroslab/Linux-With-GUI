@@ -1,0 +1,25 @@
+as in red hat you do not have access to common repositories 
+
+(this procedure will work for both Red Hat and Fedora)
+
+you can access to 'higan' the snes emulator with flatpak 
+
+anyways after the installation you have to search for 'bsnes' and not 'higan'
+
+to install first install flatpak 
+
+sudo dnf install flatpak
+
+
+finally run this without sudo
+
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+flatpak install flathub dev.bsnes.bsnes
+
+done!
+now look for bsnes and you can load your ROM's.
+
+remember to set the commands mapping of the keyboard in preferences as these are not set up by default,
+
+have fun!

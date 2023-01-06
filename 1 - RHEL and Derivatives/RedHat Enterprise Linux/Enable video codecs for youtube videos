@@ -1,0 +1,16 @@
+to enable video codecs you just have to install ffmpeg package
+
+to do that
+
+sudo subscription-manager repos --enable codeready-builder-for-rhel-8-x86_64-rpms
+
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+
+sudo dnf install https://download1.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm
+
+sudo dnf upgrade
+sudo dnf install ffmpeg
+
+if dnf upgrade retries errors no worries just proceed to install ffmpeg 
+
+done!

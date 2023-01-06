@@ -1,0 +1,16 @@
+
+
+sudo snap install unimatrix --beta
+
+then run:
+
+unimatrix 
+
+as this may be slow you may want to increase the animation speed 
+
+you can do that with -s
+
+
+unimatrix -s 96
+
+will adjust speed to something more nice
