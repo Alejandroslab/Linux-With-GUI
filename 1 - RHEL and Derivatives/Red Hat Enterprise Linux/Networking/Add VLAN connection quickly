@@ -1,0 +1,13 @@
+To quickly add a VLAN id you must have cockpit installed
+
+
+sudo yum install cockit
+
+sudo systemctl enable --now cockpit.socket
+if you need to set firewall rules then add it (look for the installation guide)
+
+
+open cockpit then go to Networking
+set the id and the connected interface
+
+done!
