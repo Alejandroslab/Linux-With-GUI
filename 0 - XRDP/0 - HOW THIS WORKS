@@ -1,0 +1,35 @@
+3 IMPORTANT FILES:
+
+sudo vim /etc/xrdp/sesman.ini
+
+sudo vim /etc/xrdp/xrdp.ini
+
+sudo vim .xinitrc
+
+
+the first one will set the session type that will also appear in the small window when connecting (login window)
+in the sesman.ini file you will be able just to set some parameters
+
+Session type can be: Xorg, XVnc or something similar and you can even add more, following this syntax:
+
+[MyVNC]
+param=x11vnc
+param=-noxdamage
+...
+
+
+the name inside the squared brackets is the label that will appear in the login window in the 
+dropdown menu
+
+
+xrdp.ini is the file that sets the session that will be used 
+you can here sete the port 
+
+
+in both sesman.ini and xrdp.ini you can comment some parts with #
+
+finally in some OSes like Manjaro you may want to use the xinitrc file, an hidden file that will launche a new session. Just comment the last line 'get_session...' and add the last line as here:
+
+
+#exec $(get_session "$1")
+exec dbus-launch --sh-syntax startplasma-x11
