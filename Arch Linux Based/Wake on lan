@@ -1,0 +1,59 @@
+first install ethtool to insoect if your interface has the feature 
+
+
+sudo pacman -Sy ethtool 
+
+then inspect it with 
+
+sudo ethtool interface | grep Wake-on
+
+
+where interface is the name of the interface that you get with 
+
+ip a
+
+So this command
+sudo ethtool interface | grep Wake-on
+
+will get you 
+
+Supports Wake-on: pumbag
+Wake-on: g
+
+if in the second line you get 'd' thst stands for 'disable' then enable with
+
+sudo ethtool -s interface wol g
+
+
+done!
+
+to make it persistent the easiset way is to use 
+NetworkManager 
+
+nmcli con show
+
+then select your interface to check the stste of wakeonlan 
+
+
+nmcli c show "myconnection" | grep 802-3-ethernet.wake-on-lan
+
+you will get:
+
+802-3-ethernet.wake-on-lan:         default
+802-3-ethernet.wake-on-lan-password:  --
+
+
+now me must enable wake on lan by magic packet
+
+
+nmcli c modify "myconnection" 802-3-ethernet.wake-on-lan magic
+
+
+done !
+
+now reboot possibly 2 times
+
+
+
+
+
