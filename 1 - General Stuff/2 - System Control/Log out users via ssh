@@ -1,0 +1,11 @@
+first
+
+who -u
+
+check the PID and the kill the user 
+
+sudo kill -HUP 32004
+
+remember that doing so the user will be logged out that means that every app will be closed
+
+who -u
