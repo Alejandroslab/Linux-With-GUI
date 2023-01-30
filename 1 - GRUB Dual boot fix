@@ -1,0 +1,70 @@
+always need to first study how your system is partitioned 
+
+disks have names like 
+sda, sdb, sdc...
+
+partitions are inside disks e have a number so there are:
+
+sda1, sda2 etc
+
+If you change the partitions it may happen that your os will become unbootable it will appear the 'grub rescue' command line
+
+to restore the GRUB you can use the usb and boot a live os 
+
+from there access to terminal and chroot
+
+chroot stands for 'change root'. it allows to enter in a installed linux os root folder and from there make changes 
+
+in manjaro e garuda chroot is easy 
+in garuda there is also an easy button 
+
+anyways is something like 'manjaro-chroot'
+
+now you need to install grub with the command grub-install
+
+
+in this way:
+
+grub-install /dev/sda
+
+if appears an error saying 
+
+that 
+
+error: cannot find EFI directory 
+
+this means that you need to investigate further the partition table 
+
+
+
+you can do that with 
+
+fdisk -l
+
+
+or just doing for the disk in whcih linux is installed:
+
+fdisk -l /dev/sda
+
+and check where is the EFI partition 
+
+let's suppose the EFI partition is placed in sda1 
+
+then we need to mount it in /boot/efi
+
+if for some reson the directory /boot/efi does not exist then just create it
+
+mkdir /boot/efi
+
+finally mount the EFI (in the sda1 in our exaple) inside the new directory just created
+
+
+mount /dev/sda1 /boot/efi
+
+done!
+
+finally 
+
+grub-install /dev/sda/
+
+when it states 'operation completed' just reboot and everything is back in place ! 
