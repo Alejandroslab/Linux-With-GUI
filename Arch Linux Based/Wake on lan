@@ -12,6 +12,8 @@ where interface is the name of the interface that you get with
 
 ip a
 
+
+
 So this command
 sudo ethtool interface | grep Wake-on
 
@@ -19,6 +21,9 @@ will get you
 
 Supports Wake-on: pumbag
 Wake-on: g
+
+REMEMBER If you have a VLAN activated just use the main interface to query with ethtool and not the VLAN interface !
+
 
 if in the second line you get 'd' thst stands for 'disable' then enable with
 
