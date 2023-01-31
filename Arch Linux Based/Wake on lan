@@ -51,8 +51,9 @@ you will get:
 now me must enable wake on lan by magic packet
 
 
-nmcli c modify "myconnection" 802-3-ethernet.wake-on-lan magic
+sudo nmcli c modify "myconnection" 802-3-ethernet.wake-on-lan magic
 
+in this case use the VLAN interface and not the original interface in which the VLAN is based
 
 done !
 
