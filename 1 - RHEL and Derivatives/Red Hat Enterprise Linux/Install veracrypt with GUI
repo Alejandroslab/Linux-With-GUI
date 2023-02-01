@@ -1,0 +1,9 @@
+Download the cert forensic tools 
+it is an .rpm file 
+
+click right on the package and click 'Open with software install'
+
+then click on the 'Install' button
+finally install veracrypt with
+
+sudo dnf --enablerepo-forensic install veracrypt 
