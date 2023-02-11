@@ -1,0 +1,5 @@
+yum list installed
+
+or
+
+sudo dnf history userinstalled
