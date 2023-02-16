@@ -1,0 +1,27 @@
+openproject uses a postgresql database 
+sudo wget -O /etc/yum.repos.d/openproject.repo \
+  https://dl.packager.io/srv/opf/openproject/stable/12/installer/el/8.repo
+
+
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm -y
+
+
+sudo yum install openproject
+
+
+
+
+
+
+after installing run for interactive choices:
+
+
+sudo openproject reconfigure 
+
+#interactive - manual choices are stored in /etc/openproject/installer.dat
+
+
+sudo openproject configure 
+
+#non-interactive - using values stored in /etc/openproject/installer.dat
+

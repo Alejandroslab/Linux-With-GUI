@@ -1,0 +1,11 @@
+sudo dnf install mysql-server
+
+sudo systemctl start mysqld.service
+
+sudo systemctl enable mysql.service
+
+
+to improve security when installing mysql, run the following command;
+
+mysql_secure_installation 
+

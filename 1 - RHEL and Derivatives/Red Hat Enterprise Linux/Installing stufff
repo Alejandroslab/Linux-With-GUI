@@ -1,0 +1,11 @@
+you can use dnf or yum alternatively
+
+sudo dnf install myapp
+
+sudo yum install myapp
+
+dnf or yum or just helper
+
+they will check if you have already installed your app with either dnf or yum
+
+they will not reinstall it if it is already installed
