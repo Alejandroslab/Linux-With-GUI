@@ -1,0 +1,12 @@
+sudo yum remove myapp
+
+you can remove more than one listting all of them
+
+sudo yum remove myapp1 myapp2 
+
+
+you can also add -y 
+
+sudo yum remove myapp1 myapp2 -y
+
+to state yes to proceed faster

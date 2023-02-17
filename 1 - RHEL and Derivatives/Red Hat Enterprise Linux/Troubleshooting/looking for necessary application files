@@ -1,0 +1,9 @@
+when you have a program that relies on some config file you may want to use them 
+
+sometimes installations are not the same for every os. some things may differ
+
+a starting point to understand where the files are is to check the systemctl 
+
+sudo systemctl myapp
+
+from there you will get some info about processes and maybe hints for the config files location 
