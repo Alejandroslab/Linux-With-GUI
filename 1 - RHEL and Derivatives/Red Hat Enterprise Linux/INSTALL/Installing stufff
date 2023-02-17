@@ -1,5 +1,7 @@
 you can use dnf or yum alternatively
 
+IT IS BETTER FOR LATEST VERSIONS OF RHEL TO USE 'DNF' INSTEAD OF 'YUM'
+
 sudo dnf install myapp
 
 sudo yum install myapp
@@ -9,3 +11,12 @@ dnf or yum or just helper
 they will check if you have already installed your app with either dnf or yum
 
 they will not reinstall it if it is already installed
+
+
+add -y to skip the confirmation 
+
+
+sudo yum install myapp -y
+
+
+
