@@ -1,0 +1,5 @@
+just rerun the installer:
+
+curl -L https://install.pivpn.io | bash
+
+and choose reconfigure
