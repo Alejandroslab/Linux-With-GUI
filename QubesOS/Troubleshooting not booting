@@ -1,0 +1,42 @@
+For the installation I have burnt the qubes os 4.2.3 with rufus on a usb stick
+
+then I run the installation selecting "Troubleshooting installation" but instead of press enter
+I pressed the letter 'e' and added
+
+/mapbs
+/noexitboot 
+
+at the end of the parameters
+then I pressed ctrl+x in order to start the installation.
+
+Finally when you finish install do not reboot go to another tty.
+ctrl + alt + F2 to go to tty2 
+go to:
+
+
+/mnt/sysimage/boot/efi/EFI/qubes/xen.cfg 
+
+(you can use vi or nano editor) and add:
+
+ mapbs=1
+ noexitboot=1
+
+Note: You must add these parameters on two separate new lines 
+
+MY NOTE: The file xen.cfg did not exist. Anyways I have created it with the two parameters set to 1
+I have noticed that there were other file some grub.efi but also a grub.cfg
+I have  added to the grub.cfg the 2 parameters at the end of the file. 
+
+SO I HAVE ADDED THE TWO PARAMETERS TO THE PREEXISTIN FILE grub.cfg but also to the non existing
+file xen.cfg
+
+
+Go back to tty6 (Ctrl-Alt-F6) and click Reboot.
+
+Now if you have set up your bios with legacy + uefi you may not enter in the Qubes installation drive
+Qubes have been installed as UEFI therefore you must select the OS in the boot menu when you start the pc
+
+(You can now go to your bios menu and disable legacy mode and just leave the UEFI one in order to auotmaically boot Qubes)
+
+
+Continue with setting up default templates and logging in to Qubes.
